@@ -1,0 +1,142 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar { /*latar*/
+  background-color: #fff;
+  height: 70px;
+  padding: 0.2rem;
+}
+
+section{
+  padding: 50px 10%;
+}
+
+.navbar-brand { /*logo*/
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img{
+  width: 120px;
+}
+
+.login-button{
+  background-color: #A79277;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.2s background-color;
+}
+
+.login-button:hover{ /*pas dipencet berubah warna jd lebih muda*/
+  background-color: #D1BB9E;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{ /*close button*/
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link{ /*warna hruf atas*/
+  color: #A79277;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active{
+  color: #D1BB9E;
+}
+
+@media (min-width: 991px) { /*transisi tulisan navbar*/
+  .nav-link::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #A79277;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before, .nav-link.active::before {
+      width: 100%;
+      visibility: visible;
+  }
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #EAD8C0;
+  gap: 1rem;
+}
+
+.home-text {
+  flex: 1 1 17rem;
+}
+
+.home-img img{
+  flex: 1 1 17rem;
+}
+
+.home-text span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #543310;
+}
+
+.home-text h1 {
+  font-size: 3.2rem;
+  color: #74512D;
+  font-weight: bolder;
+}
+
+.home-text h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #AF8F6F;
+  text-transform: uppercase;
+  margin: 0.5rem 0 1.4rem;
+}
+
+.btn {
+  padding: 7px 16px;
+  background-color:  #A79277;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #D1BB9E;
+}
+
