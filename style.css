@@ -147,3 +147,21 @@ section{
 .contact h2, .contact h5, .contact p {
   color: #F8F4E1;
 }
+
+/*delivery*/
+.delivery {
+  background-color: #AF8F6F;
+  color: #F8F4E1;
+}
+.delivery-content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.btn-custom {
+  background-color: #F8F4E1;
+  color: #543310;
+}
+.btn-custom:hover {
+  background-color: #e2dec0;
+  color: #3e290d;
+}
