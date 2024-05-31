@@ -15,14 +15,14 @@ img {
   width: 100%;
 }
 
+section{
+  padding: 50px 10%;
+}
+
 .navbar { /*latar*/
   background-color: #fff;
   height: 70px;
-  padding: 0.2rem;
-}
-
-section{
-  padding: 50px 10%;
+  padding: 0.5rem;
 }
 
 .navbar-brand { /*logo*/
@@ -89,13 +89,12 @@ section{
 }
 
 .home {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   background: #EAD8C0;
   gap: 1rem;
+  padding: 100px 10%;
 }
 
 .home-text {
@@ -103,7 +102,8 @@ section{
 }
 
 .home-img img{
-  flex: 1 1 17rem;
+  flex: 1 1 50%;
+  object-fit: cover;
 }
 
 .home-text span {
@@ -139,4 +139,3 @@ section{
   color: #fff;
   background: #D1BB9E;
 }
-
