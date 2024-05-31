@@ -94,7 +94,7 @@ section{
   align-items: center;
   background: #EAD8C0;
   gap: 1rem;
-  padding: 100px 10%;
+  padding: 90px 10% 20px;
 }
 
 .home-text {
@@ -102,8 +102,7 @@ section{
 }
 
 .home-img img{
-  flex: 1 1 50%;
-  object-fit: cover;
+  flex: 1 1 17rem;
 }
 
 .home-text span {
