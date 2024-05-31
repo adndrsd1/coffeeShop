@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" href="#">Reservation</a></li>
                         <li class="nav-item"><a class="nav-link max-lg-2" href="index.html">Delivery</a></li>
                         <li class="nav-item"><a class="nav-link max-lg-2" href="index.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link max-lg-2" href="index.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -80,8 +80,40 @@
         </div>
     </section>
     
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Our Location</h5>
+                    <p>123 Coffee Street, Jakarta, Indonesia</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contact Information</h5>
+                    <p>Email: info@beanbliss.com</p>
+                    <p>Phone: +62 123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script>
+        // JavaScript to handle adding 'active' class to Contact link when clicked
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav-link').forEach(function(nav) {
+                    nav.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
+</html>
 </html>
