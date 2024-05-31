@@ -27,7 +27,7 @@
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item"><a class="nav-link max-lg-2 active" aria-current="page" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link max-lg-2" href="#">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link mx-lg-2" href="reservation.html">Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link mx-lg-2" href="#reservation">Reservation</a></li>
                         <li class="nav-item"><a class="nav-link max-lg-2" href="#">Delivery</a></li>
                         <li class="nav-item"><a class="nav-link max-lg-2" href="#">About</a></li>
                         <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link" href="#contact">Contact</a></li>
@@ -54,6 +54,78 @@
         </div>
     </section>
 
+    <!-- Reservation Section -->
+    <section class="reservation" id="reservation">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Table Reservation</h2>
+            <div class="row">
+                <!-- Indoor Section -->
+                <div class="reservation py-5">
+                    <div id="indoorCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card mb-3">
+                                    <img src="img/indoor.png" class="card-img-top" alt="Indoor Seating">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Indoor Seating</h5>
+                                        <p class="card-text">Enjoy our cozy indoor seating with a warm atmosphere.</p>
+                                        <p class="card-text">Available Seats: <strong>15</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card mb-3">
+                                    <img src="img/outdoor.png" class="card-img-top" alt="Indoor Seating">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Outdoor Seating</h5>
+                                        <p class="card-text">Relax in our beautiful outdoor seating area with fresh air.</p>
+                                        <p class="card-text">Available Seats: <strong>20</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#indoorCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#indoorCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <a href="reservation.html" class="btn">Reserve Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+    <!-- Delivery Section -->
+    <section class="delivery" id="delivery">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Delivery Service</h2>
+            <div class="row align-items-center">
+                <div class="col-6 col-md-6">
+                    <img src="img/delivery.png" class="img-fluid" alt="Delivery Service">
+                </div>
+                <div class="col-6 col-md-6">
+                    <div class="delivery-content">
+                        <h3>Order Your Favorite Coffee to Your Doorstep</h3>
+                        <p>Enjoy your favorite Bean Bliss coffee from the comfort of your home. Order now and get your coffee delivered hot and fresh right to your doorstep.</p>
+                        <h5>How to Order:</h5>
+                        <ol>
+                            <li>Visit our online menu.</li>
+                            <li>Select your favorite coffee and add to cart.</li>
+                            <li>Proceed to checkout and provide your delivery details.</li>
+                            <li>Confirm your order and make the payment.</li>
+                            <li>Sit back and relax while we prepare your order.</li>
+                        </ol>
+                        <a href="delivery.html" class="btn btn-custom">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container my-5">
