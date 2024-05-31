@@ -139,3 +139,12 @@ section{
   color: #fff;
   background: #D1BB9E;
 }
+
+/* Contact Section */
+.contact {
+  background-color: #543310;
+  color: #F8F4E1;
+}
+.contact h2, .contact h5, .contact p {
+  color: #F8F4E1;
+}
