@@ -126,19 +126,6 @@ section{
   margin: 0.5rem 0 1.4rem;
 }
 
-.btn {
-  padding: 7px 16px;
-  background-color:  #A79277;
-  border-radius: 40px;
-  color: #fff;
-  font-weight: 500;
-}
-
-.btn:hover {
-  color: #fff;
-  background: #D1BB9E;
-}
-
 /* Contact Section */
 .contact {
   background-color: #543310;
@@ -164,4 +151,17 @@ section{
 .btn-custom:hover {
   background-color: #e2dec0;
   color: #3e290d;
+}
+
+.btn {
+  padding: 7px 16px;
+  background-color:  #A79277;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #D1BB9E;
 }
