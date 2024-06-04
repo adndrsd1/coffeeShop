@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const signinForm = document.getElementById('signinForm');
+    const signupForm = document.getElementById('signupForm');
+
+    if (signinForm) {
+        signinForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            window.location.href = 'home.html'; // Arahkan ke halaman home setelah login
+        });
+    }
+
+    if (signupForm) {
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            // Here, you can add your AJAX call to register the user
+            window.location.href = 'signin.html';
+        });
+    }
+});
+
 // Scrollspy implementation
 window.addEventListener('scroll', function() {
     let sections = document.querySelectorAll('section');
@@ -17,3 +37,25 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
+    //transisi
+    const links = document.querySelectorAll('a');
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const href = this.getAttribute('href');
+            const currentPage = document.querySelector('.page');
+            currentPage.classList.add('page-hidden');
+            setTimeout(function() {
+                window.location.href = href;
+            }, 500); // Mengarahkan ke halaman baru setelah 0.5 detik (sesuai dengan durasi transisi CSS)
+        });
+    });
+});*/
+
+
+
+
+
