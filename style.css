@@ -1,5 +1,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+.page {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.page-hidden {
+    opacity: 0;
+}
+
+
 img {
   width: 100%;
 }
@@ -19,6 +30,47 @@ section{
   padding: 50px 10%;
 }
 
+.heading span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #74512D;
+  font-weight: bolder;
+}
+
+.heading h1 {
+  font-size: 1rem;
+  color: black;
+}
+
+.btn {
+  padding: 7px 16px;
+  background-color:  #A79277;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #D1BB9E;
+}
+
+.Lightbtn{
+  background-color: #D1BB9E;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.Lightbtn:hover { /*pas dipencet berubah warna jd lebih muda*/
+  background-color: #A79277;
+}
+
+/*navbar*/
 .navbar { /*latar*/
   background-color: #fff;
   height: 70px;
@@ -34,20 +86,6 @@ section{
   width: 120px;
 }
 
-.login-button{
-  background-color: #A79277;
-  color: #fff;
-  font-size: 14px;
-  padding: 8px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: 0.2s background-color;
-}
-
-.login-button:hover{ /*pas dipencet berubah warna jd lebih muda*/
-  background-color: #D1BB9E;
-}
-
 .navbar-toggler {
   border: none;
   font-size: 1.25rem;
@@ -58,7 +96,7 @@ section{
   outline: none;
 }
 
-.nav-link{ /*warna hruf atas*/
+.nav-link{ /*warna hruf navbar*/
   color: #A79277;
   font-weight: 500;
   position: relative;
@@ -88,16 +126,17 @@ section{
   }
 }
 
+/*heading home  bagian atas*/
 .home {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   background: #EAD8C0;
   gap: 1rem;
-  padding: 90px 10% 20px;
+  padding: 90px 10% 0px 10%;
 }
 
-.home-text {
+.home-text{
   flex: 1 1 17rem;
 }
 
@@ -105,7 +144,7 @@ section{
   flex: 1 1 17rem;
 }
 
-.home-text span {
+.home-text span{
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -118,12 +157,210 @@ section{
   font-weight: bolder;
 }
 
-.home-text h2 {
+.home-text h2{
   font-size: 1.8rem;
   font-weight: 600;
-  color: #AF8F6F;
+  color: black;
   text-transform: uppercase;
   margin: 0.5rem 0 1.4rem;
+}
+
+/*home carosel*/
+.carousel-caption{
+  color: black;
+}
+
+@media (min-width: 1407px) {
+    .favorite .carousel-caption {
+    top: 50%; /* Letakkan caption di tengah vertikal */
+    transform: translateY(-50%);/* Geser caption ke atas sejauh setengah dari tingginya */
+  }
+}
+
+@media (max-width: 1407px) {
+  .carousel-caption p {
+      display: none; /* Sembunyikan semua teks pada caption */
+  }
+}
+
+@media (max-width: 495px) {
+  .carousel-caption h5 {
+      display: none; /* Sembunyikan semua teks pada caption */
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Mengubah warna ikon menjadi hitam */
+}
+
+/* Menu */
+section.menu {
+  padding: 70px 0px; /* Atur padding menjadi 0 untuk lebar penuh */
+  width: 100%; /* Pastikan lebar penuh */
+  margin: 0; /* Hapus margin jika ada */
+}
+
+/*promo*/
+.promo .heading {
+  text-align: end;
+}
+
+.promo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.promo-container .box {
+  flex: 1 1 10rem;
+  background: #EAD8C0;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+}
+
+.promo-container .box .box-img {
+  width: 150px;
+  height: 150px;
+  margin-top: -80px;
+}
+
+.promo-container .box .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.promo-container .box h2 {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.promo-container .box span {
+  color: #FF0000;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0.2rem 0 0.5rem;
+}
+
+/*Sign up log in*/
+.form-section {
+  padding: 100px 10%;
+  background: #f8f9fa;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #543310;
+}
+
+.form-container .btn {
+  width: 100%;
+  background-color: #A79277;
+  color: #fff;
+}
+
+.form-container .btn:hover {
+  background-color: #D1BB9E;
+}
+
+.displayMenu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Menambahkan jarak antara kartu-kartu */
+  justify-content: center; /* Menyusun kartu di tengah container */
+}
+
+.displayMenu-container .card {
+  flex: 1 1 18rem; /* Fleksibel dengan ukuran minimum 18rem */
+  border-radius: 0.5rem;
+}
+
+.displayMenu-container .card img {
+  width: 100%;
+  height: auto; /* Menjaga rasio aspek gambar */
+  object-fit: contain;
+}
+
+.displayMenu-container .card h5 {
+  color: black;
+  font-size: 1rem;
+}
+
+.displayMenu-container .card p {
+  color: black;
+  font-size: 0.7rem;
+}
+
+/* Media queries untuk tampilan yang lebih kecil */
+@media (max-width: 768px) {
+  .displayMenu-container {
+    flex-direction: column; /* Susun kartu secara vertikal pada layar kecil */
+  }
+
+  .displayMenu-container .card {
+    width: 100%; /* Lebar penuh pada layar kecil */
+  }
+}
+
+.new-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.new-container .new-box {
+  flex: 1 1 10rem;
+  background: #EAD8C0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.new-container .new-box .box-img {
+  width: 150px;
+  height: 150px;
+  margin-top: -80px;
+}
+
+.new-container .new-box .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  .new-text {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center; /* Optional: for center-aligned text */
+  }
+}
+
+.promo {
+  background: #D1BB9E;
 }
 
 /* Contact Section */
@@ -165,3 +402,5 @@ section{
   color: #fff;
   background: #D1BB9E;
 }
+  
+/*tulisan kal kecil ikut kecil*/
