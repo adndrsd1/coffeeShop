@@ -30,17 +30,21 @@ section{
   padding: 50px 10%;
 }
 
-.heading span {
-  font-size: 1.5rem;
+.heading span, .heading2 span {
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
   color: #74512D;
   font-weight: bolder;
 }
 
-.heading h1 {
+.heading h1, .heading2 h1 {
   font-size: 1rem;
   color: black;
+}
+
+.heading2{
+  text-align: center;
 }
 
 .btn {
@@ -160,7 +164,7 @@ section{
 .home-text h2{
   font-size: 1.8rem;
   font-weight: 600;
-  color: black;
+  color: #A79277;
   text-transform: uppercase;
   margin: 0.5rem 0 1.4rem;
 }
@@ -324,24 +328,20 @@ section.menu {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .new-container .new-box {
   flex: 1 1 10rem;
-  background: #EAD8C0;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
   border-radius: 0.5rem;
 }
 
 .new-container .new-box .box-img {
-  width: 150px;
-  height: 150px;
-  margin-top: -80px;
+  width: 370px;
+  height: 370px;
 }
 
 .new-container .new-box .box-img img {
@@ -353,14 +353,60 @@ section.menu {
 
 @media (min-width: 768px) {
   .new-text {
-    max-width: 50%;
+    max-width: 60%;
     margin: 0 auto;
     text-align: center; /* Optional: for center-aligned text */
   }
 }
 
-.promo {
-  background: #D1BB9E;
+.containerHome {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.menuHome-img,
+.reservationHome-img,
+.deliveryHome-img,
+.aboutHome-img {
+  flex: 1 1 21rem;
+}
+.menuHome-text,
+.reservationHome-text,
+.deliveryHome-text,
+.aboutHome-text {
+  flex: 1 1 21rem;
+}
+.menuHome-text h2,
+.reservationHome-text h2,
+.deliveryHome-text h2,
+.aboutHome-text h2 {
+  font-size: 1.2rem;
+  color: black;
+}
+.menuHome-text p,
+.reservationHome-text p,
+.deliveryHome-text p,
+.aboutHome-text p {
+  margin: 0.5rem 0 1rem;
+  text-align: justify;
+}
+
+.menuHome-text p:nth-of-type(2),
+.reservationHome-text p:nth-of-type(2),
+.deliveryHome-text p:nth-of-type(2),
+.aboutHome-text p:nth-of-type(2){
+  font-weight: bold;
+}
+
+.menuHome,
+.deliveryHome{
+  background: #EAD8C0;
+}
+
+.reservationHome,
+.aboutHome{
+  background: #FFF2E1;
 }
 
 /* Contact Section */
@@ -372,35 +418,5 @@ section.menu {
   color: #F8F4E1;
 }
 
-/*delivery*/
-.delivery {
-  background-color: #AF8F6F;
-  color: #F8F4E1;
-}
-.delivery-content {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.btn-custom {
-  background-color: #F8F4E1;
-  color: #543310;
-}
-.btn-custom:hover {
-  background-color: #e2dec0;
-  color: #3e290d;
-}
-
-.btn {
-  padding: 7px 16px;
-  background-color:  #A79277;
-  border-radius: 40px;
-  color: #fff;
-  font-weight: 500;
-}
-
-.btn:hover {
-  color: #fff;
-  background: #D1BB9E;
-}
   
 /*tulisan kal kecil ikut kecil*/
