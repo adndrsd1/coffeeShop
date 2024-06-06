@@ -206,6 +206,10 @@ section.menu {
 }
 
 /*promo*/
+section.promo{
+  padding: 0px 10% 50px 10%;
+}
+
 .promo .heading {
   text-align: end;
 }
@@ -365,18 +369,21 @@ section.menu {
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
 .menuHome-img,
 .reservationHome-img,
 .deliveryHome-img,
 .aboutHome-img {
   flex: 1 1 21rem;
 }
+
 .menuHome-text,
 .reservationHome-text,
 .deliveryHome-text,
 .aboutHome-text {
   flex: 1 1 21rem;
 }
+
 .menuHome-text h2,
 .reservationHome-text h2,
 .deliveryHome-text h2,
@@ -384,6 +391,7 @@ section.menu {
   font-size: 1.2rem;
   color: black;
 }
+
 .menuHome-text p,
 .reservationHome-text p,
 .deliveryHome-text p,
