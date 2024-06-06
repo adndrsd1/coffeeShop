@@ -351,10 +351,10 @@ section.menu {
   object-position: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1208px) {
   .new-text {
     max-width: 60%;
-    margin: 0 auto;
+    margin: 0;
     text-align: center; /* Optional: for center-aligned text */
   }
 }
