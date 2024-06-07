@@ -86,7 +86,8 @@ section{
   align-items: center;
 }
 
-.navbar-brand img{
+.navbar-brand img,
+.offcanvas-header img{
   width: 120px;
 }
 
