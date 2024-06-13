@@ -336,7 +336,7 @@ section.promo{
 }
 
 .displayMenu-container .card {
-  flex: 1 1 18rem; /* Fleksibel dengan ukuran minimum 18rem */
+  flex: 1 1 15rem; /* Fleksibel dengan ukuran minimum 18rem */
   border-radius: 0.5rem;
 }
 
