@@ -133,25 +133,62 @@ section{
 
 /*heading home  bagian atas*/
 .home {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   background: #EAD8C0;
   gap: 1rem;
   padding: 90px 10% 0px 10%;
 }
 
+.homeBox1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 2;
+  position: relative; /* Tambahkan position untuk mengaktifkan z-index */
+}
+
+.homeBox2 {
+  z-index: 1;
+  position: absolute; /* Ubah ke absolute untuk memastikan tumpang tindih */
+  background-color: #FFF2E1; /* Warna latar belakang untuk contoh */
+}
+
+@media (min-width: 887px) {
+  .home {
+    position: relative; /* Pastikan ada titik koma di akhir */
+  }
+  
+  .homeBox2 {
+    width: auto; /* Lebar elemen */
+    height: 500px; /* Tinggi elemen */
+    bottom: 150px; /* Posisi vertikal */
+    left: 5%; 
+    right: 5%;
+    border-radius: 20px;
+  }
+
+  .home-img img{
+    padding-bottom: 150px;
+  }
+}
+
+@media (max-width: 887px) {
+  .home{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  }
+}
+
 .home-text{
-  flex: 1 1 17rem;
+  flex: 1 1 14rem;
 }
 
 .home-img img{
-  flex: 1 1 17rem;
+  flex: 1 1 14rem;
 }
 
 .home-text span{
   font-size: 1rem;
-  text-transform: uppercase;
   font-weight: 600;
   color: #543310;
 }
@@ -344,15 +381,9 @@ section.promo{
   border-radius: 0.5rem;
 }
 
-.new-container .new-box .box-img {
-  width: 370px;
-  height: 370px;
-}
-
 .new-container .new-box .box-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
   object-position: center;
 }
 
