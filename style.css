@@ -451,13 +451,54 @@ section.promo{
 }
 
 /* Contact Section */
-.contact {
+.footer {
   background-color: #543310;
   color: #F8F4E1;
 }
-.contact h2, .contact h5, .contact p {
+.footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer .logo img {
+  width: 150px;
+}
+.footer .location, 
+.footer .Info {
+    flex: 0 0 calc(25% - 30px);
+}
+.footer h2, 
+.footer h5, 
+.footer p {
   color: #F8F4E1;
 }
-
+.footer .kelompok {   
+  font-weight: lighter;
+  margin-top: 30px;
+  padding: 1rem;
+  flex: 0 0 100%;
+  text-align: center;
+}
+.kelompok hr {
+  color: #F8F4E1;
+}
+.footer .kelompok h5 {
+  font-weight: lighter;
+  margin-top: 1rem;
+}
+.footer .kelompok .anggota {
+  display: flex;
+  justify-content: between; 
+  align-items: center;
+}
+.members, .numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.logo-upn {
+  width: 50px;
+}
   
 /*tulisan kal kecil ikut kecil*/
