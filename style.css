@@ -21,7 +21,6 @@
     opacity: 0;
 }
 
-
 img {
   width: 100%;
 }
@@ -188,7 +187,7 @@ section{
   flex: 1 1 14rem;
 }
 
-.home-text span{
+.home-text h3{
   font-size: 1rem;
   font-weight: 600;
   color: #543310;
@@ -295,37 +294,6 @@ section.promo{
   font-size: 1.4rem;
   font-weight: 500;
   margin: 0.2rem 0 0.5rem;
-}
-
-/*Sign up log in*/
-.form-section {
-  padding: 100px 10%;
-  background: #f8f9fa;
-}
-
-.form-container {
-  max-width: 500px;
-  margin: auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #543310;
-}
-
-.form-container .btn {
-  width: 100%;
-  background-color: #A79277;
-  color: #fff;
-}
-
-.form-container .btn:hover {
-  background-color: #D1BB9E;
 }
 
 .displayMenu-container {
@@ -450,55 +418,53 @@ section.promo{
   background: #FFF2E1;
 }
 
+
 /* Contact Section */
-.footer {
+.contact {
   background-color: #543310;
   color: #F8F4E1;
 }
-.footer .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.footer .logo img {
-  width: 150px;
-}
-.footer .location, 
-.footer .Info {
-    flex: 0 0 calc(25% - 30px);
-}
-.footer h2, 
-.footer h5, 
-.footer p {
+.contact h2, .contact h5, .contact p {
   color: #F8F4E1;
 }
-.footer .kelompok {   
-  font-weight: lighter;
-  margin-top: 30px;
-  padding: 1rem;
-  flex: 0 0 100%;
-  text-align: center;
+
+/*sign-In sign-up*/
+body.signin, body.signup{
+    background-color: #FFF2E1;
 }
-.kelompok hr {
-  color: #F8F4E1;
+.box-area{
+    width: 930px;
 }
-.footer .kelompok h5 {
-  font-weight: lighter;
-  margin-top: 1rem;
+
+.right-box{
+    padding: 40px 30px 40px 40px;
 }
-.footer .kelompok .anggota {
-  display: flex;
-  justify-content: between; 
-  align-items: center;
+
+::placeholder{
+    font-size: 16px;
 }
-.members, .numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+
+.rounded-4{
+    border-radius: 20px;
 }
-.logo-upn {
-  width: 50px;
+.rounded-5{
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
 }
   
 /*tulisan kal kecil ikut kecil*/
