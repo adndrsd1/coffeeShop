@@ -135,7 +135,6 @@ section{
 .home {
   background: #EAD8C0;
   gap: 1rem;
-  padding: 90px 10% 0px 10%;
 }
 
 .homeBox1 {
@@ -155,6 +154,7 @@ section{
 @media (min-width: 887px) {
   .home {
     position: relative; /* Pastikan ada titik koma di akhir */
+    padding: 40px 10% 0px 10%;
   }
   
   .homeBox2 {
@@ -176,6 +176,7 @@ section{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 90px 10% 0px 10%;
   }
 }
 
