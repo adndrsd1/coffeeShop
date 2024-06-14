@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Your order is placed! Thank you for buying and enjoy your coffee!');
         let orderDetails = [];
 
-        /* Contoh buat masukin pesanannya ke database
+        /* Buat masukin pesanannya ke database dan hapus dari cart klo udh berhasil pesan(?)*/
         // Send data to server using AJAX
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "add_to_database.php", true);
@@ -129,7 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cartContent.removeChild(cartContent.firstChild);
         }
         updateTotal();
-        */
     }
 
     // Function for "Remove Items from Cart"
