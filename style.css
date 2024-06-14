@@ -325,6 +325,7 @@ section.favorite{
   background: #FFF2E1;
 }
 .infoHome-text {
+  font-size: 0.8rem;
   flex: 1 1 21rem;
   margin-bottom: 10px;
 }
@@ -332,13 +333,13 @@ section.favorite{
   text-align: justify;
 }
 .infoHome-text h2 {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: black;
 }
 .infoHome-img{
   flex: 1 1 21rem;
 }
-@media (min-width: 1515px) {
+@media (min-width: 1135px) {
   .containerInfoHome {
     display: flex;
     flex-wrap: wrap;
@@ -352,7 +353,8 @@ section.favorite{
     max-height: 100%;
   }
   .infoHome-text {
-    padding: 50px 70px 50px 70px;
+    padding: 20px 70px 20px 70px;
+    margin: 0;
   }
   section.menuInfoHome,
   section.reservationInfoHome,
