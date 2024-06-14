@@ -339,7 +339,7 @@ section.favorite{
 .infoHome-img{
   flex: 1 1 21rem;
 }
-@media (min-width: 1265pxpx) {
+@media (min-width: 1265px) {
   .containerInfoHome {
     display: flex;
     flex-wrap: wrap;
