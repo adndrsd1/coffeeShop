@@ -325,7 +325,7 @@ section.favorite{
   background: #FFF2E1;
 }
 .infoHome-text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   flex: 1 1 21rem;
   margin-bottom: 10px;
 }
@@ -333,13 +333,13 @@ section.favorite{
   text-align: justify;
 }
 .infoHome-text h2 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: black;
 }
 .infoHome-img{
   flex: 1 1 21rem;
 }
-@media (min-width: 1135px) {
+@media (min-width: 1208pxpx) {
   .containerInfoHome {
     display: flex;
     flex-wrap: wrap;
