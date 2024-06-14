@@ -380,7 +380,7 @@ section.favorite{
 }
 .footer .location, 
 .footer .Info {
-    flex: 0 0 calc(25% - 30px);
+  flex: 0 0 calc(25% - 30px);
 }
 .footer h2, 
 .footer h5, 
@@ -403,18 +403,35 @@ section.favorite{
 }
 .footer .kelompok .anggota {
   display: flex;
-  justify-content: between; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
   align-items: center;
 }
 .members, .numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 .logo-upn {
   width: 50px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer .location, 
+  .footer .Info {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  .footer .kelompok .anggota {
+    flex-direction: column;
+  }
+  .footer .kelompok .anggota .text-right {
+    margin-top: 20px;
+  }
+}
+
 
 /*sign-In sign-up*/
 body.signin, body .signup{
