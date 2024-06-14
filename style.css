@@ -447,5 +447,184 @@ body.signin, body .signup{
         padding: 20px;
      }
 }
+
+/* Delivery Section */
+.deliveryMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 90px 10% 0px 10%;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem
+}
+
+.box-container .box {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #ddd; /* Sesuaikan dengan var(--border) jika ada */
+  transition: background-color 0.3s, color 0.3s;
+  background: #D1BB9E;
+}
+
+.box-container .box img {
+  width: 100%;
+  height: auto; /* Menjaga rasio aspek gambar */
+  object-fit: contain;
+}
+
+.box-container .box h3, .box-container .box h5 {
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.box-container .box .price {
+  color: #000; /* Sesuaikan warna jika diperlukan */
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.box-container .box:hover {
+  background-color: #f0f0f0; /* Sesuaikan warna jika diperlukan */
+}
+
+.box-container .box:hover > * {
+  color: var(--black); /* Pastikan var(--black) didefinisikan */
+}
+
+/* Media queries untuk tampilan yang lebih kecil */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column; /* Susun kartu secara vertikal pada layar kecil */
+  }
+
+  .box-container .box {
+    width: 100%; /* Lebar penuh pada layar kecil */
+  }
+}
+
+/* Chart Section */
+.floating-container {
+  position: fixed;
+  bottom: 35px;
+  right: 25px;
+  z-index: 1000;
+}
+.floating-button {
+  width: 65px;
+  height: 65px;
+  background: #74512D;
+  border-radius: 50%;
+  color: #EAD8C0;
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  box-shadow: 0 10px 25px -5px #543310;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.floating-button:hover {
+  box-shadow: 0 10px 25px #543310;
+  transform: translateY(-5px);
+}
+.floating-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.cart {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 110px;
+  right: 25px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 1000;
+}
+.cart.active {
+  display: block;
+}
+.cart-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cart-content {
+  max-height: 220px; /* Set the desired max height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.cart-content::-webkit-scrollbar {
+  width: 10px;
+}
+.cart-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.cart-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.cart-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.detail-box{
+  padding-left: 15px;
+  width: 180px;
+}
+.cart-img {
+  width: 50px;
+  height: 50px;
+}
+.cart-product-title {
+  font-size: 18px;
+}
+.cart-price, .cart-quantity {
+  width: 100px;
+  align-items: left;
+  font-size: 15px;
+}
+.cart-remove {
+  cursor: pointer;
+  color: rgb(135, 44, 31);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.btn-buy {
+  display: block;
+  width: 100%;
+  background-color: #543310;
+  color: #EAD8C0;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.btn-buy:hover {
+  background-color: #3e270b;
+}
   
 /*tulisan kal kecil ikut kecil*/
