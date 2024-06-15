@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,17 +39,42 @@
 
             <!---Kanan---> 
             <div class="col-md-6 right-box">
-                <form id="signinForm" action="" method="post">
+                <?php
+                    include "config.php";
+
+                    if(isset($_POST['submit'])){
+                        $username = mysqli_real_escape_string($con, $_POST['username']);
+                        $password = mysqli_real_escape_string($con, $_POST['password']);
+
+                        $query = "SELECT * FROM users WHERE username='$username'";
+                        $result = mysqli_query($con, $query);
+                        $row = mysqli_fetch_assoc($result);
+
+                        if ($row && $row['password'] === $password) {
+                            $_SESSION['valid'] = $row['username'];
+                            $_SESSION['email'] = $row['email'];
+                            $_SESSION['id'] = $row['id'];
+                            $_SESSION['status'] = $row['status'];
+
+                            header("Location: signin_berhasil.html");
+                        } else {
+                            echo "<div class='alert alert-danger' role='alert'>Wrong username or password</div>";
+                            echo "<a href='signin.php'><button class='btn'>Try Again</button>";
+
+                        }
+                    } else {
+                ?>
+                <form id="signinForm" action="" methode="post">
                     <div class="row align-items-center">
                         <div class="header-text mb-4">
                             <h2>Welcome Back!</h2>
                             <p>We're excited to serve you again.</p>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
+                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username" name="username" required>
                         </div>
                         <div class="input-group mb-1">
-                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
+                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" name="password" required>
                         </div>
                         <div class="input-group mb-5 d-flex justify-content-end">
                             <div class="forgot">
@@ -60,6 +89,7 @@
                         </div>
                     </div>
                 </form>
+                <?php } ?>
             </div> 
         </div>
     </div>

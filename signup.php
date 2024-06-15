@@ -26,20 +26,43 @@
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <!---Kiri--->
             <div class="col-md-6 right-box">
-                <form id="signupForm">
+                <?php
+                    include "config.php";
+
+                    if(isset($_POST['submit'])){
+                        $username = $_POST['username'];
+                        $email = $_POST['email'];
+                        $password = $_POST['password'];
+                    
+                        // cek email unik
+                        $verify_query = mysqli_query($con, "SELECT email from users WHERE email='$email'");
+                        if(mysqli_num_rows($verify_query) !=0){
+                            echo "<div class='alert alert-danger' role='alert'>This email is already used, please try another one!</div>";
+                            echo "<a href='signup.php'><button class='btn'>Try Again</button>";
+                        
+                        }
+                        else {
+                            mysqli_query($con, "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')");
+                            echo "<div class='alert alert-success' role='alert'>Registration Succesfully!</div>";
+                            echo "<a href='signin.php'><button class='btn'>Sign In</button>";
+                        } 
+                    
+                    } else {
+                ?>
+                <form id="signupForm" action="" method="post">
                     <div class="row align-items-center">
                         <div class="header-text mb-4">
                             <h2>Join Us!</h2>
                             <p>Create your account to enjoy exclusive perks.</p>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
+                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username" name="username" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email Address" required>
+                            <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email Address" name="email" required>
                         </div>
                         <div class="input-group mb-1">
-                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
+                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" name="password" required>
                         </div>
                         <div class="input-group mb-5 d-flex justify-content-between">
                             <div class="form-check">
@@ -48,12 +71,13 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" id="signup-button" name="submit">Sign-Up</button>
+                            <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" id="signup-button" name="submit">Sign Up</button>
                         </div>
                         <div class="row">
                             <small>Already have an account? <a href="signin.php">Sign In</a></small>
                         </div>
-                    </div>
+                        </div>
+                <?php } ?>
                 </form>
             </div> 
 
