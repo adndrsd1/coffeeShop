@@ -11,6 +11,20 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
+
+:root{
+  --brown0:#543310;
+  --brown1:#74512D;
+  --brown2:#A79277;
+  --brown3:#D1BB9E;
+  --brown4:#EAD8C0;
+  --brown5:#FFF2E1;
+  --brown6:#F8F4E1;
+  --black:#333;
+  --white:#fff;
+  --red:#FF0000;
+  --bg-color:#eee;
+}
 .page {
     opacity: 1;
     transition: opacity 0.2s ease;
@@ -30,12 +44,12 @@ section{
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: #74512D;
+  color: var(--darkBrown);
   font-weight: bolder;
 }
 .heading h1, .heading2 h1 {
   font-size: 1rem;
-  color: black;
+  color: var(--black);
 }
 .heading2{
   text-align: end;
@@ -44,17 +58,17 @@ section{
 /*button*/
 .btn {
   padding: 7px 16px;
-  background-color:  #A79277;
+  background-color:  var(--brown2);
   border-radius: 40px;
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
 }
 .btn:hover {
-  background: #D1BB9E;
+  background: var(--brown3);
 }
 .Lightbtn{
-  background-color: #D1BB9E;
-  color: black;
+  background-color: var(--brown3);
+  color: var(--black);
   font-size: 14px;
   font-weight: 500;
   padding: 8px 20px;
@@ -63,12 +77,12 @@ section{
   transition: 0.2s;
 }
 .Lightbtn:hover { 
-  background-color: #A79277;
+  background-color: var(--brown2);
 }
 
 /*navigation bar*/
 .navbar { /*latar*/
-  background-color: #fff;
+  background-color: var(--white);
   height: 70px;
   padding: 0.5rem;
 }
@@ -89,12 +103,12 @@ section{
   outline: none;
 }
 .nav-link{
-  color: #A79277;
+  color: var(--brown2);
   font-weight: 500;
   position: relative;
 }
 .nav-link:hover, .nav-link.active{
-  color: #D1BB9E;
+  color: var(--brown3);
 }
 @media (min-width: 991px) { /*transisi navbar*/
   .nav-link::before{
@@ -105,7 +119,7 @@ section{
       transform: translateX(-50%);
       width: 0;
       height: 2px;
-      background-color: #A79277;
+      background-color: var(--brown2);
       visibility: hidden;
       transition: 0.3s ease-in-out;
   }
@@ -115,10 +129,41 @@ section{
   }
 }
 
+/*sign-In sign-up*/
+body.signin, body .signup{
+  background-color: var(--brown5);
+}
+.box-area{
+  width: 930px;
+}
+.right-box{
+  padding: 40px 30px 40px 40px;
+}
+::placeholder{
+  font-size: 16px;
+}
+.rounded-4{
+  border-radius: 20px;
+}
+.rounded-5{
+  border-radius: 30px;
+}
+@media only screen and (max-width: 768px){
+   .box-area{
+      margin: 0 10px;
+   }
+   .left-box{
+      height: 100px;
+      overflow: hidden;
+   }
+   .right-box{
+      padding: 20px;
+   }
+}
 
 /*home cover*/
 .home {
-  background: #EAD8C0;
+  background: var(--brown5);
   gap: 1rem;
 }
 .homeBox1 {
@@ -131,7 +176,7 @@ section{
 .homeBox2 {
   z-index: 1;
   position: absolute;
-  background-color: #FFF2E1; 
+  background-color: var(--brown5); 
 }
 @media (min-width: 887px) {
   .home {
@@ -167,17 +212,17 @@ section{
 .home-text h3{
   font-size: 1rem;
   font-weight: 600;
-  color: #543310;
+  color: var(--brown0);
 }
 .home-text h1 {
   font-size: 3.2rem;
-  color: #74512D;
+  color: var(--brown1);
   font-weight: bolder;
 }
 .home-text h2{
   font-size: 1.8rem;
   font-weight: 600;
-  color: #A79277;
+  color: var(--brown2);
   text-transform: uppercase;
   margin: 0.5rem 0 1.4rem;
 }
@@ -188,7 +233,7 @@ section.favorite{
   width: 100%;
 }
 .carousel-caption{
-  color: black;
+  color: var(--black);
 }
 @media (min-width: 1407px) {
     .favorite .carousel-caption {
@@ -221,7 +266,7 @@ section.favorite{
 }
 .promo-container .box {
   flex: 1 1 10rem;
-  background: #EAD8C0;
+  background: var(--brown4);
   padding: 20px;
   display: flex;
   text-align: center;
@@ -242,45 +287,14 @@ section.favorite{
   object-position: center;
 }
 .promo-container .box h2 {
-  color: black;
+  color: var(--black);
   font-size: 1.2rem;
 }
 .promo-container .box span {
-  color: #FF0000;
+  color: var(--red);
   font-size: 1.4rem;
   font-weight: 500;
   margin: 0.2rem 0 0.5rem;
-}
-.displayMenu-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; 
-  justify-content: center;
-}
-.displayMenu-container .card {
-  flex: 1 1 15rem; 
-  border-radius: 0.5rem;
-}
-.displayMenu-container .card img {
-  width: 100%;
-  height: auto; 
-  object-fit: contain;
-}
-.displayMenu-container .card h5 {
-  color: black;
-  font-size: 1rem;
-}
-.displayMenu-container .card p {
-  color: black;
-  font-size: 0.7rem;
-}
-@media (max-width: 768px) {
-  .displayMenu-container {
-    flex-direction: column; 
-  }
-  .displayMenu-container .card {
-    width: 100%;
-  }
 }
 
 /*what's new*/
@@ -319,11 +333,11 @@ section.favorite{
 }
 .menuInfoHome,
 .deliveryInfoHome{
-  background: #EAD8C0;
+  background: var(--brown4);
 }
 .reservationInfoHome,
 .aboutInfoHome{
-  background: #FFF2E1;
+  background: var(--brown5);
 }
 .infoHome-text {
   font-size: 1rem;
@@ -335,7 +349,7 @@ section.favorite{
 }
 .infoHome-text h2 {
   font-size: 1rem;
-  color: black;
+  color: var(--black);
 }
 .infoHome-img{
   flex: 1 1 21rem;
@@ -366,10 +380,46 @@ section.favorite{
   }
 }
 
+/*Menu*/
+section.menuCarousel{
+  padding: 0;
+}
+.displayMenu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; 
+  justify-content: center;
+}
+.displayMenu-container .card {
+  flex: 1 1 15rem; 
+  border-radius: 0.5rem;
+}
+.displayMenu-container .card img {
+  width: 100%;
+  height: auto; 
+  object-fit: contain;
+}
+.displayMenu-container .card h5 {
+  color: var(--black);
+  font-size: 1rem;
+}
+.displayMenu-container .card p {
+  color: var(--black);
+  font-size: 0.7rem;
+}
+@media (max-width: 768px) {
+  .displayMenu-container {
+    flex-direction: column; 
+  }
+  .displayMenu-container .card {
+    width: 100%;
+  }
+}
+
 /* Contact Section */
 .footer {
-  background-color: #543310;
-  color: #F8F4E1;
+  background-color: var(--brown0);
+  color: var(--brown6);
 }
 .footer .footer-container {
   display: flex;
@@ -386,7 +436,7 @@ section.favorite{
 .footer h2, 
 .footer h5, 
 .footer p {
-  color: #F8F4E1;
+  color: var(--brown6);
 }
 .footer .kelompok {   
   font-weight: lighter;
@@ -396,7 +446,7 @@ section.favorite{
   text-align: center;
 }
 .kelompok hr {
-  color: #F8F4E1;
+  color: var(--brown6);
 }
 .footer .kelompok h5 {
   font-weight: lighter;
@@ -433,38 +483,6 @@ section.favorite{
   }
 }
 
-/*sign-In sign-up*/
-body.signin, body .signup{
-    background-color: #FFF2E1;
-}
-.box-area{
-    width: 930px;
-}
-.right-box{
-    padding: 40px 30px 40px 40px;
-}
-::placeholder{
-    font-size: 16px;
-}
-.rounded-4{
-    border-radius: 20px;
-}
-.rounded-5{
-    border-radius: 30px;
-}
-@media only screen and (max-width: 768px){
-     .box-area{
-        margin: 0 10px;
-     }
-     .left-box{
-        height: 100px;
-        overflow: hidden;
-     }
-     .right-box{
-        padding: 20px;
-     }
-}
-
 /* Delivery Section */
 .deliveryMenu {
   display: flex;
@@ -485,7 +503,7 @@ body.signin, body .signup{
   text-align: center;
   border: 1px solid #ddd; /* Sesuaikan dengan var(--border) jika ada */
   transition: background-color 0.3s, color 0.3s;
-  background: #D1BB9E;
+  background: var(--brown3);
 }
 
 .box-container .box img {
@@ -495,7 +513,7 @@ body.signin, body .signup{
 }
 
 .box-container .box h3, .box-container .box h5 {
-  color: black;
+  color: var(--black);
   font-size: 1rem;
   padding: 0.5rem 0;
 }
@@ -535,13 +553,13 @@ body.signin, body .signup{
 .floating-button {
   width: 65px;
   height: 65px;
-  background: #74512D;
+  background: var(--brown1);
   border-radius: 50%;
-  color: #EAD8C0;
+  color: var(--);
   line-height: 65px;
   text-align: center;
   font-size: 23px;
-  box-shadow: 0 10px 25px -5px #543310;
+  box-shadow: 0 10px 25px -5px var(--brown0);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -549,7 +567,7 @@ body.signin, body .signup{
   transition: all 0.3s;
 }
 .floating-button:hover {
-  box-shadow: 0 10px 25px #543310;
+  box-shadow: 0 10px 25px var(--brown0);
   transform: translateY(-5px);
 }
 .floating-button img {
@@ -563,7 +581,7 @@ body.signin, body .signup{
   bottom: 110px;
   right: 25px;
   width: 300px;
-  background: white;
+  background: var(--black);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   border-radius: 8px;
   padding: 20px;
@@ -631,8 +649,8 @@ body.signin, body .signup{
 .btn-buy {
   display: block;
   width: 100%;
-  background-color: #543310;
-  color: #EAD8C0;
+  background-color: var(--brown0);
+  color: var(--brown4);
   border: none;
   padding: 10px;
   font-size: 16px;
@@ -643,5 +661,3 @@ body.signin, body .signup{
 .btn-buy:hover {
   background-color: #3e270b;
 }
-  
-/*tulisan kal kecil ikut kecil*/
