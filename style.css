@@ -11,24 +11,21 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
-
 .page {
     opacity: 1;
     transition: opacity 0.2s ease;
 }
-
 .page-hidden {
     opacity: 0;
 }
-
 img {
   width: 100%;
 }
-
 section{
-  padding: 50px 10%;
+  padding: 50px 10% 50px 10%;
 }
 
+/*heading*/
 .heading span, .heading2 span {
   font-size: 2rem;
   text-transform: uppercase;
@@ -36,16 +33,15 @@ section{
   color: #74512D;
   font-weight: bolder;
 }
-
 .heading h1, .heading2 h1 {
   font-size: 1rem;
   color: black;
 }
-
 .heading2{
-  text-align: center;
+  text-align: end;
 }
 
+/*button*/
 .btn {
   padding: 7px 16px;
   background-color:  #A79277;
@@ -53,11 +49,9 @@ section{
   color: #fff;
   font-weight: 500;
 }
-
 .btn:hover {
   background: #D1BB9E;
 }
-
 .Lightbtn{
   background-color: #D1BB9E;
   color: black;
@@ -68,49 +62,41 @@ section{
   text-decoration: none;
   transition: 0.2s;
 }
-
-.Lightbtn:hover { /*pas dipencet berubah warna jd lebih muda*/
+.Lightbtn:hover { 
   background-color: #A79277;
 }
 
-/*navbar*/
+/*navigation bar*/
 .navbar { /*latar*/
   background-color: #fff;
   height: 70px;
   padding: 0.5rem;
 }
-
 .navbar-brand { /*logo*/
   display: flex;
   align-items: center;
 }
-
 .navbar-brand img,
 .offcanvas-header img{
   width: 120px;
 }
-
 .navbar-toggler {
   border: none;
   font-size: 1.25rem;
 }
-
 .navbar-toggler:focus, .btn-close:focus{ /*close button*/
   box-shadow: none;
   outline: none;
 }
-
-.nav-link{ /*warna hruf navbar*/
+.nav-link{
   color: #A79277;
   font-weight: 500;
   position: relative;
 }
-
 .nav-link:hover, .nav-link.active{
   color: #D1BB9E;
 }
-
-@media (min-width: 991px) { /*transisi tulisan navbar*/
+@media (min-width: 991px) { /*transisi navbar*/
   .nav-link::before{
       content: "";
       position: absolute;
@@ -123,53 +109,47 @@ section{
       visibility: hidden;
       transition: 0.3s ease-in-out;
   }
-
   .nav-link:hover::before, .nav-link.active::before {
       width: 100%;
       visibility: visible;
   }
 }
 
-/*heading home  bagian atas*/
+
+/*home cover*/
 .home {
   background: #EAD8C0;
   gap: 1rem;
 }
-
 .homeBox1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   z-index: 2;
-  position: relative; /* Tambahkan position untuk mengaktifkan z-index */
+  position: relative; 
 }
-
 .homeBox2 {
   z-index: 1;
-  position: absolute; /* Ubah ke absolute untuk memastikan tumpang tindih */
-  background-color: #FFF2E1; /* Warna latar belakang untuk contoh */
+  position: absolute;
+  background-color: #FFF2E1; 
 }
-
 @media (min-width: 887px) {
   .home {
-    position: relative; /* Pastikan ada titik koma di akhir */
+    position: relative; 
     padding: 40px 10% 0px 10%;
   }
-  
   .homeBox2 {
-    width: auto; /* Lebar elemen */
-    height: 500px; /* Tinggi elemen */
-    bottom: 150px; /* Posisi vertikal */
+    width: auto; 
+    height: 500px; 
+    bottom: 150px; 
     left: 5%; 
     right: 5%;
     border-radius: 20px;
   }
-
   .home-img img{
     padding-bottom: 150px;
   }
 }
-
 @media (max-width: 887px) {
   .home{
   display: flex;
@@ -178,27 +158,22 @@ section{
   padding: 90px 10% 0px 10%;
   }
 }
-
 .home-text{
   flex: 1 1 14rem;
 }
-
 .home-img img{
   flex: 1 1 14rem;
 }
-
 .home-text h3{
   font-size: 1rem;
   font-weight: 600;
   color: #543310;
 }
-
 .home-text h1 {
   font-size: 3.2rem;
   color: #74512D;
   font-weight: bolder;
 }
-
 .home-text h2{
   font-size: 1.8rem;
   font-weight: 600;
@@ -207,58 +182,43 @@ section{
   margin: 0.5rem 0 1.4rem;
 }
 
-/*home carosel*/
+/*home carousel favorite*/
+section.favorite{
+  padding: 50px 10% 10px 10%;
+  width: 100%;
+}
 .carousel-caption{
   color: black;
 }
-
 @media (min-width: 1407px) {
     .favorite .carousel-caption {
-    top: 50%; /* Letakkan caption di tengah vertikal */
-    transform: translateY(-50%);/* Geser caption ke atas sejauh setengah dari tingginya */
+    top: 50%; 
+    transform: translateY(-50%);
   }
 }
-
 @media (max-width: 1407px) {
   .carousel-caption p {
-      display: none; /* Sembunyikan semua teks pada caption */
+      display: none;
   }
 }
-
 @media (max-width: 495px) {
   .carousel-caption h5 {
-      display: none; /* Sembunyikan semua teks pada caption */
+      display: none;
   }
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(1); /* Mengubah warna ikon menjadi hitam */
-}
-
-/* Menu */
-section.menu {
-  padding: 70px 0px; /* Atur padding menjadi 0 untuk lebar penuh */
-  width: 100%; /* Pastikan lebar penuh */
-  margin: 0; /* Hapus margin jika ada */
+    filter: invert(1); 
 }
 
 /*promo*/
-section.promo{
-  padding: 0px 10% 50px 10%;
-}
-
-.promo .heading {
-  text-align: end;
-}
-
 .promo-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 3rem;
 }
-
 .promo-container .box {
   flex: 1 1 10rem;
   background: #EAD8C0;
@@ -270,152 +230,140 @@ section.promo{
   margin-top: 3rem;
   border-radius: 0.5rem;
 }
-
 .promo-container .box .box-img {
   width: 150px;
   height: 150px;
   margin-top: -80px;
 }
-
 .promo-container .box .box-img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
 }
-
 .promo-container .box h2 {
   color: black;
   font-size: 1.2rem;
 }
-
 .promo-container .box span {
   color: #FF0000;
   font-size: 1.4rem;
   font-weight: 500;
   margin: 0.2rem 0 0.5rem;
 }
-
 .displayMenu-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; /* Menambahkan jarak antara kartu-kartu */
-  justify-content: center; /* Menyusun kartu di tengah container */
+  gap: 1rem; 
+  justify-content: center;
 }
-
 .displayMenu-container .card {
-  flex: 1 1 15rem; /* Fleksibel dengan ukuran minimum 18rem */
+  flex: 1 1 15rem; 
   border-radius: 0.5rem;
 }
-
 .displayMenu-container .card img {
   width: 100%;
-  height: auto; /* Menjaga rasio aspek gambar */
+  height: auto; 
   object-fit: contain;
 }
-
 .displayMenu-container .card h5 {
   color: black;
   font-size: 1rem;
 }
-
 .displayMenu-container .card p {
   color: black;
   font-size: 0.7rem;
 }
-
-/* Media queries untuk tampilan yang lebih kecil */
 @media (max-width: 768px) {
   .displayMenu-container {
-    flex-direction: column; /* Susun kartu secara vertikal pada layar kecil */
+    flex-direction: column; 
   }
-
   .displayMenu-container .card {
-    width: 100%; /* Lebar penuh pada layar kecil */
+    width: 100%;
   }
 }
 
+/*what's new*/
 .new-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex: 1 1 14rem;
+  justify-content: center;
 }
-
-.new-container .new-box {
-  flex: 1 1 10rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 0.5rem;
+.new-container .new-img {
+  width: 70%;
+  height: 70%;
 }
-
-.new-container .new-box .box-img img {
-  width: 100%;
-  height: 100%;
-  object-position: center;
+.new-text p{
+  text-align: justify;
 }
-
-@media (min-width: 1208px) {
+@media (min-width: 1025px) {
+  .new-container {
+    gap: 5rem;
+  }
   .new-text {
     max-width: 60%;
-    margin: 0;
-    text-align: center; /* Optional: for center-aligned text */
+  }
+  .new-container .new-img {
+    width: 30%;
+    height: 30%;
   }
 }
 
-.containerHome {
+/* info home*/
+.containerInfoHome {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2rem;
 }
-
-.menuHome-img,
-.reservationHome-img,
-.deliveryHome-img,
-.aboutHome-img {
-  flex: 1 1 21rem;
-}
-
-.menuHome-text,
-.reservationHome-text,
-.deliveryHome-text,
-.aboutHome-text {
-  flex: 1 1 21rem;
-}
-
-.menuHome-text h2,
-.reservationHome-text h2,
-.deliveryHome-text h2,
-.aboutHome-text h2 {
-  font-size: 1.2rem;
-  color: black;
-}
-
-.menuHome-text p,
-.reservationHome-text p,
-.deliveryHome-text p,
-.aboutHome-text p {
-  margin: 0.5rem 0 1rem;
-  text-align: justify;
-}
-
-.menuHome-text p:nth-of-type(2),
-.reservationHome-text p:nth-of-type(2),
-.deliveryHome-text p:nth-of-type(2),
-.aboutHome-text p:nth-of-type(2){
-  font-weight: bold;
-}
-
-.menuHome,
-.deliveryHome{
+.menuInfoHome,
+.deliveryInfoHome{
   background: #EAD8C0;
 }
-
-.reservationHome,
-.aboutHome{
+.reservationInfoHome,
+.aboutInfoHome{
   background: #FFF2E1;
+}
+.infoHome-text {
+  font-size: 1rem;
+  flex: 1 1 21rem;
+  margin-bottom: 10px;
+}
+.infoHome-text p{
+  text-align: justify;
+}
+.infoHome-text h2 {
+  font-size: 1rem;
+  color: black;
+}
+.infoHome-img{
+  flex: 1 1 21rem;
+}
+@media (min-width: 1265px) {
+  .containerInfoHome {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    gap:0;
+  }
+  .infoHome-img{
+    flex: 1 1 21rem;
+    max-width: 50%;
+    max-height: 100%;
+  }
+  .infoHome-text {
+    padding: 20px 70px 20px 70px;
+    margin: 0;
+  }
+  section.menuInfoHome,
+  section.reservationInfoHome,
+  section.deliveryInfoHome,
+  section.aboutInfoHome{
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
 /* Contact Section */
@@ -433,7 +381,7 @@ section.promo{
 }
 .footer .location, 
 .footer .Info {
-    flex: 0 0 calc(25% - 30px);
+  flex: 0 0 calc(25% - 30px);
 }
 .footer h2, 
 .footer h5, 
@@ -456,47 +404,57 @@ section.promo{
 }
 .footer .kelompok .anggota {
   display: flex;
-  justify-content: between; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
   align-items: center;
 }
 .members, .numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 .logo-upn {
   width: 50px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer .location, 
+  .footer .Info {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  .footer .kelompok .anggota {
+    flex-direction: column;
+  }
+  .footer .kelompok .anggota .text-right {
+    margin-top: 20px;
+  }
+}
+
 /*sign-In sign-up*/
-body.signin, body.signup{
+body.signin, body .signup{
     background-color: #FFF2E1;
 }
 .box-area{
     width: 930px;
 }
-
 .right-box{
     padding: 40px 30px 40px 40px;
 }
-
 ::placeholder{
     font-size: 16px;
 }
-
 .rounded-4{
     border-radius: 20px;
 }
 .rounded-5{
     border-radius: 30px;
 }
-
 @media only screen and (max-width: 768px){
-
      .box-area{
         margin: 0 10px;
-
      }
      .left-box{
         height: 100px;
@@ -505,7 +463,185 @@ body.signin, body.signup{
      .right-box{
         padding: 20px;
      }
+}
 
+/* Delivery Section */
+.deliveryMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 90px 10% 0px 10%;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:1.5rem
+}
+
+.box-container .box {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #ddd; /* Sesuaikan dengan var(--border) jika ada */
+  transition: background-color 0.3s, color 0.3s;
+  background: #D1BB9E;
+}
+
+.box-container .box img {
+  width: 100%;
+  height: auto; /* Menjaga rasio aspek gambar */
+  object-fit: contain;
+}
+
+.box-container .box h3, .box-container .box h5 {
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.box-container .box .price {
+  color: #000; /* Sesuaikan warna jika diperlukan */
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.box-container .box:hover {
+  background-color: #f0f0f0; /* Sesuaikan warna jika diperlukan */
+}
+
+.box-container .box:hover > * {
+  color: var(--black); /* Pastikan var(--black) didefinisikan */
+}
+
+/* Media queries untuk tampilan yang lebih kecil */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column; /* Susun kartu secara vertikal pada layar kecil */
+  }
+
+  .box-container .box {
+    width: 100%; /* Lebar penuh pada layar kecil */
+  }
+}
+
+/* Chart Section */
+.floating-container {
+  position: fixed;
+  bottom: 35px;
+  right: 25px;
+  z-index: 1000;
+}
+.floating-button {
+  width: 65px;
+  height: 65px;
+  background: #74512D;
+  border-radius: 50%;
+  color: #EAD8C0;
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  box-shadow: 0 10px 25px -5px #543310;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.floating-button:hover {
+  box-shadow: 0 10px 25px #543310;
+  transform: translateY(-5px);
+}
+.floating-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.cart {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 110px;
+  right: 25px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 1000;
+}
+.cart.active {
+  display: block;
+}
+.cart-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cart-content {
+  max-height: 220px; /* Set the desired max height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.cart-content::-webkit-scrollbar {
+  width: 10px;
+}
+.cart-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.cart-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.cart-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.detail-box{
+  padding-left: 15px;
+  width: 180px;
+}
+.cart-img {
+  width: 50px;
+  height: 50px;
+}
+.cart-product-title {
+  font-size: 18px;
+}
+.cart-price, .cart-quantity {
+  width: 100px;
+  align-items: left;
+  font-size: 15px;
+}
+.cart-remove {
+  cursor: pointer;
+  color: rgb(135, 44, 31);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.btn-buy {
+  display: block;
+  width: 100%;
+  background-color: #543310;
+  color: #EAD8C0;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.btn-buy:hover {
+  background-color: #3e270b;
 }
   
 /*tulisan kal kecil ikut kecil*/

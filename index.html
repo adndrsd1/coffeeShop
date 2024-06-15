@@ -26,10 +26,10 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="home-link" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" id="favorite-link" href="#menuHome">Menu</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" id="reservation-link" href="#reservationHome">Reservation</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" id="delivery-link" href="#deliveryHome">Delivery</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" id="about-link" href="#aboutHome">About</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" id="favorite-link" href="#menuInfoHome">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" id="reservation-link" href="#reservationInfoHome">Reservation</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" id="delivery-link" href="#deliveryInfoHome">Delivery</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" id="about-link" href="#aboutInfoHome">About</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="footer-link" href="#footer">Contact</a></li>
                         </ul>
                     </div>
@@ -47,7 +47,7 @@
                 <div class="home-text">
                     <h1>Bean Bliss Coffee</h1>
                     <h2>Brewing Joy in Every Cup</h2>
-                    <h3>Experience the freshness and warmth in every sip of Bean Bliss Coffee.<br><h3>
+                    <h3>Experience the freshness and warmth in every sip of Bean Bliss Coffee.<br></h3>
                     <a href="delivery.html" class="btn">Grab Now</a>
                 </div>
                 <div class="home-img">
@@ -105,7 +105,7 @@
 
         <!--Promo-->
         <section class="promo" id="promo">
-            <div class="heading">
+            <div class="heading2">
                 <span>Special Offer!</span>
                 <h1>Save up to 50% on your favorite products. Offer ends soon!</h1>
             </div>
@@ -161,22 +161,16 @@
                     <p>"Crispy on the outside, soft and fluffy on the inside, our waffles are a delightful treat for any time of day. Enjoy them with a variety of toppings such as fresh berries, whipped cream, syrup, or a dusting of powdered sugar."</p>
                     <a href="delivery.html" class="btn">Grab Now</a>
                 </div>
-                <div class="new-box">
-                    <div class="box-img">
-                        <img src="img/new.png" alt="new">
-                    </div>
+                <div class="new-img">
+                    <img src="img/new.png" alt="new">
                 </div>
             </div>
         </section>
 
         <!-- Menu-Home -->
-        <section class="menuHome" id="menuHome">
-            <div class="heading2">
-                <span>Menu</span>
-                <h1>Explore Our Menu</h1>
-            </div>
-            <div class="containerHome">
-                <div class="menuHome-img">
+        <section class="menuInfoHome" id="menuInfoHome">
+            <div class="containerInfoHome">
+                <div class="infoHome-img">
                     <div id="carouselMenuHome" class="carousel slide" data-bs-ride="true">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -202,25 +196,26 @@
                         </button>
                     </div>
                 </div>
-                <div class="menuHome-text">
+                <div class="infoHome-text">
+                    <div class="heading">
+                        <span>Menu</span>
+                    </div>
                     <h2>Our menu features</h2>
-                    <p>A diverse selection of delectable dishes, each designed to tantalize your taste buds and satisfy your cravings. From hearty breakfast options to sumptuous lunches and exquisite dinners, we have something to delight every palate.</p>
-                    <p>Discover the delicious offerings we have in store for you. Click the link below to view our full menu and start planning your next</p>
+                    <p>A diverse selection of delectable dishes, each designed to tantalize your taste buds and satisfy your cravings. From hearty coffee options to sumptuous pastries and exquisite snaks, we have something to delight every palate.</p>
                     <a href="menu.html" class="btn">Chcek Our Menu</a>
                 </div>
             </div>
         </section>
 
         <!-- Reservation-Home -->
-        <section class="reservationHome" id="reservationHome">
-            <div class="heading2">
-                <span>Reservation</span>
-                <h1>Book Your Table</h1>
-            </div>
-            <div class="containerHome">
-                <div class="reservationHome-text">
-                    <h2>Enjoy an Unforgettable Dining Experience</h2>
-                    <p>By reserving your table in advance. Our easy-to-use reservation system allows you to secure your spot at our restaurant with just a few clicks.</p>
+        <section class="reservationInfoHome" id="reservationInfoHome">
+            <div class="containerInfoHome">
+                <div class="infoHome-text">
+                    <div class="heading">
+                        <span>Reservation</span>
+                    </div>
+                    <h2>Enjoy an unforgettable dining experience</h2>
+                    <p>Our easy-to-use reservation system allows you to secure your spot at our restaurant with just a few clicks.</p>
                     <p>How to Reserve:</p>
                     <ol>
                         <li>1. Select the date and time that suits you best.</li>
@@ -229,7 +224,7 @@
                     </ol>
                     <a href="reservation.html" class="btn">Save Your Sit</a>
                 </div>
-                <div class="reservationHome-img">
+                <div class="infoHome-img">
                     <div id="carouselReservationHome" class="carousel slide" data-bs-ride="true">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -253,18 +248,17 @@
         </section>
 
         <!-- Delivery Home-->
-        <section class="deliveryHome" id="deliveryHome">
-            <div class="heading2">
-                <span>Delivery</span>
-                <h1>Bringing Coffee Quality By Your Door</h1>
-            </div>
-            <div class="containerHome">
-                <div class="deliveryHome-img">
+        <section class="deliveryInfoHome" id="deliveryInfoHome">
+            <div class="containerInfoHome">
+                <div class="infoHome-img">
                     <img src="img/deliveryHome.png" alt="">
                 </div>
-                <div class="deliveryHome-text">
-                    <h2>Today deserve delivery</h2>
-                    <p>Enjoy the delicious flavors of our menu from the comfort of your home with our convenient delivery service. We bring your favorite dishes right to your doorstep, ensuring that you can indulge in our culinary delights without leaving your house.</p>
+                <div class="infoHome-text">
+                    <div class="heading">
+                        <span>Delivery</span>
+                    </div>
+                    <h2>We bring your favorite dishes right to your doorstep</h2>
+                    <p>Indulge in our culinary delights without leaving your house.</p>
                     <p>How to Order:</p>
                     <ol>
                         <li>1. Visit our online menu.</li>
@@ -279,19 +273,17 @@
         </section>
 
         <!-- About -->
-        <section class="aboutHome" id="aboutHome">
-            <div class="heading2">
-                <span>About Us</span>
-                <h1>Welcome to Our Restaurant</h1>
-            </div>
-            <div class="containerHome">
-                
-                <div class="aboutHome-text">
+        <section class="aboutInfoHome" id="aboutInfoHome">
+            <div class="containerInfoHome">
+                <div class="infoHome-text">
+                    <div class="heading">
+                        <span>About Us</span>
+                    </div>
                     <h2>At our restaurant,</h2>
                     <p>We believe that food is more than just sustenance; it's an experience that brings people together. Our journey began with a passion for culinary excellence and a commitment to providing our guests with unforgettable dining moments.</p>
                     <a href="about.html" class="btn">Learn More</a>
                 </div>
-                <div class="aboutHome-img">
+                <div class="infoHome-img">
                     <img src="img/about.png" alt="about">
                 </div>
             </div>
@@ -343,11 +335,9 @@
                                 </a>
                             </div>
                         </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
+                </section>
     </div>
 
     <!-- Bootstrap JS -->
