@@ -46,40 +46,8 @@
         <!-- Reservation Section -->
         <section class="reservation" id="reservation">
             <div class="container my-5">
-            <?php
-                include "config.php";
-
-                if(isset($_POST["submit"])) {
-                    $data = $_POST;
-                    global $con;
-                    $fullName = htmlspecialchars($data["fullName"]);
-                    $email = htmlspecialchars($data["email"]);
-                    $phone = htmlspecialchars($data["phone"]);
-                    $reservationDate = date('Y-m-d', strtotime($data["reservationDate"]));
-                    $reservationTime = date('H:i', strtotime($data["reservationTime"]));
-                    $amountGuest = htmlspecialchars($data["amountGuest"]);
-                    $specialReq = htmlspecialchars($data["specialReq"]);
-                
-                    $query = "INSERT INTO reservasi
-                                (fullName, email, phoneNumber, jumlahTamu, tanggalReservasi, waktuReservasi, specialReq)
-                                VALUES
-                            ('$fullName', '$email', '$phone', '$amountGuest', '$reservationDate', '$reservationTime', '$specialReq')
-                            ";
-
-                    if(mysqli_query($con, $query)) {
-                        echo "<div class='alert alert-success' role='alert'>Reservation Succesfully!</div>";
-                    } else {
-                        echo "
-                            <script>
-                                alert('data gagal ditambahkan!');
-                                document.location.href = '../index.php';
-                            </script>
-                        ";
-                    }
-                } else {
-            ?>
                 <h2 class="text-center mb-4">Table Reservation</h2>
-                <form action="reservation.php" method="post">
+                <form action="reservationController.php" method="post">
                     <div class="mb-3">
                         <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="name" name="fullName" required>
@@ -111,7 +79,6 @@
                     <button type="submit" class="btn btn-primary" name="submit">Submit Reservation</button>
                 </form>
             </div>
-            <?php } ?>
         </section>
         
         <!-- Contact Section -->

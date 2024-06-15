@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     
@@ -26,30 +27,7 @@
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <!---Kiri--->
             <div class="col-md-6 right-box">
-                <?php
-                    include "config.php";
-
-                    if(isset($_POST['submit'])){
-                        $username = $_POST['username'];
-                        $email = $_POST['email'];
-                        $password = $_POST['password'];
-                    
-                        // cek email unik
-                        $verify_query = mysqli_query($con, "SELECT email from users WHERE email='$email'");
-                        if(mysqli_num_rows($verify_query) !=0){
-                            echo "<div class='alert alert-danger' role='alert'>This email is already used, please try another one!</div>";
-                            echo "<a href='signup.php'><button class='btn'>Try Again</button>";
-                        
-                        }
-                        else {
-                            mysqli_query($con, "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')");
-                            echo "<div class='alert alert-success' role='alert'>Registration Succesfully!</div>";
-                            echo "<a href='signin.php'><button class='btn'>Sign In</button>";
-                        } 
-                    
-                    } else {
-                ?>
-                <form id="signupForm" action="" method="post">
+                <form id="signupForm" action="signupController.php" method="post">
                     <div class="row align-items-center">
                         <div class="header-text mb-4">
                             <h2>Join Us!</h2>
@@ -72,12 +50,12 @@
                         </div>
                         <div class="input-group mb-3">
                             <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" id="signup-button" name="submit">Sign Up</button>
+                            
                         </div>
                         <div class="row">
                             <small>Already have an account? <a href="signin.php">Sign In</a></small>
                         </div>
-                        </div>
-                <?php } ?>
+                    </div>
                 </form>
             </div> 
 
@@ -98,5 +76,3 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
