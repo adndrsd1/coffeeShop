@@ -161,6 +161,14 @@ body.left, body.right{
    }
 }
 
+/*profile*/
+.container {
+  width: 30%;
+}
+.profileBox{
+  padding: 70px;
+}
+
 /*home cover*/
 .home {
   background: var(--brown5);
