@@ -171,7 +171,7 @@ body.left, body.right{
 
 /*home cover*/
 .home {
-  background: var(--brown5);
+  background: var(--brown4);
   gap: 1rem;
 }
 .homeBox1 {
