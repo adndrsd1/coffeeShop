@@ -15,7 +15,7 @@
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
 </head>
-<body class="signin">
+<body class="left">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand me-auto" href="index.html"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
@@ -24,7 +24,7 @@
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
-            <!---Kiri--->
+            <!---gambar--->
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #EAD8C0;">
                 <p class="fs-2 mt-3" style="font-weight: 600; color: #74512D;">Bean Bliss</p>
                 <small class="text-wrap text-center mb-3" style="width: 17rem; color: #A79277;">Enjoy our freshly brewed coffee and exclusive offers just for you.</small>
@@ -33,7 +33,7 @@
                 </div>
             </div> 
 
-            <!---Kanan---> 
+            <!---form---> 
             <div class="col-md-6 right-box">
                 <form id="signinForm" action="signinController.php" method="post">
                     <div class="row align-items-center">
