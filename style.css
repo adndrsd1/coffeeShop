@@ -130,7 +130,7 @@ section{
 }
 
 /*sign-In sign-up*/
-body.signin, body .signup{
+body.left, body.right{
   background-color: var(--brown5);
 }
 .box-area{
