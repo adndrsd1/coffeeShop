@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
 >>>>>>> 1f5ccfa279a25ca983b2dfef83ba92955f86bbbd
         });
     }
+
+//js forgotPass, changePass, profileForm.
 });
 
 // Scrollspy implementation
