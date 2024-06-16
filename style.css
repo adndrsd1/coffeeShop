@@ -44,7 +44,7 @@ section{
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--darkBrown);
+  color: var(--brown1);
   font-weight: bolder;
 }
 .heading h1, .heading2 h1 {
