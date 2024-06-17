@@ -49,7 +49,7 @@
                         </div>
                         <div class="input-group mb-5 d-flex justify-content-end">
                             <div class="forgot">
-                                <small><a href="#">Forgot Password?</a></small>
+                                <small><a href="fotgotPassword.html">Forgot Password?</a></small>
                             </div>
                         </div>
                         <div class="input-group mb-3">
