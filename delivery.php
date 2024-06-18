@@ -33,18 +33,15 @@
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="menu.html">Menu</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="reservation.html">Reservation</a>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="reservation.php">Reservation</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page"
-                                    href="delivery.html">Delivery</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" href="delivery.php">Delivery</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link"
-                                    href="#contact">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
-                <a href="signin.html" class="Lightbtn" id="signin-button">Login</a>
-                <a href="profile.html" class="Lightbtn" id="profile-button">Profile</a>
+                <a href="signin.php" class="Lightbtn" id="signin-button">Sign In</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -310,7 +307,7 @@
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <div class="box" id="boxSnacks1">
-                            <img src="img/menuPastries1.png" alt="" class="product-img">
+                            <img src="img/menuSnacks1.png" alt="" class="product-img">
                             <h3 class="product-title">Sandwich</h3>
                             <div class="price">Rp 20000</div>
                             <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
