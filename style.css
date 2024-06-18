@@ -500,6 +500,10 @@ section.menuCarousel{
   padding: 90px 10% 0px 10%;
 }
 
+section.deliveryCarousel{
+  padding: 90px 10% 0px 10%;
+}
+
 .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

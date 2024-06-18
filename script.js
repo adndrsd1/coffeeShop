@@ -40,23 +40,6 @@ window.addEventListener('scroll', function() {
     });
 });
 
-
-/*document.addEventListener('DOMContentLoaded', function () {
-    //transisi
-    const links = document.querySelectorAll('a');
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const href = this.getAttribute('href');
-            const currentPage = document.querySelector('.page');
-            currentPage.classList.add('page-hidden');
-            setTimeout(function() {
-                window.location.href = href;
-            }, 500); // Mengarahkan ke halaman baru setelah 0.5 detik (sesuai dengan durasi transisi CSS)
-        });
-    });
-});*/
-
 // CART
 document.addEventListener('DOMContentLoaded', () => {
     let cartItem = document.querySelector('.cart');
