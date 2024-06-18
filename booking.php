@@ -25,7 +25,7 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="home-link" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="home-link" href="homeAdmin.php">Home</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="favorite-link" href="manageMenu.php">Menu</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="reservation-link" href="booking.php">Reservation</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="delivery-link" href="orders.php">Delivery</a></li>
@@ -38,22 +38,53 @@
                 </button>
             </div>
         </nav>
-
-        <!-- Home -->
-        <section class="home" id="home">
-            <div class="homeBox1">
-                <div class="home-text">
-                    <h1>Bean Bliss Coffee</h1>
-                    <h2>Brewing Joy in Every Cup</h2>
-                    <h3>Experience the freshness and warmth in every sip of Bean Bliss Coffee.<br></h3>
-                </div>
-                <div class="home-img">
-                    <img src="img/background1.png" alt="coffee">
-                </div>
-            </div>
-            <div class="homeBox2"></div>
-        </section>
     </div>
+
+    <!-- View Bookings -->
+    <section class="home" id="home">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Bookings</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Guests</th>
+                        <th scope="col">Special Requests</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        require 'config.php';
+
+                        $query = "SELECT * FROM reservasi ORDER BY tanggalReservasi ASC, waktuReservasi ASC";
+                        $result = $con->query($query);
+
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $row['fullName'] . "</td>";
+                                echo "<td>" . $row['email'] . "</td>";
+                                echo "<td>" . $row['phoneNumber'] . "</td>";
+                                echo "<td>" . $row['tanggalReservasi'] . "</td>";
+                                echo "<td>" . $row['waktuReservasi'] . "</td>";
+                                echo "<td>" . $row['jumlahTamu'] . "</td>";
+                                echo "<td>" . $row['specialReq'] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='7'>No bookings found</td></tr>";
+                        }
+                        $con->close();
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -29,14 +29,13 @@
                             <li class="nav-item"><a class="nav-link max-lg-2" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="menu.html">Menu</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" href="#reservation">Reservation</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="delivery.html">Delivery</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="delivery.php">Delivery</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="home.html">About</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
-                <a href="signin.php" class="Lightbtn" id="signin-button">Login</a>
-                <a href="profile.html" class="Lightbtn" id="profile-button">Profile</a>
+                <a href="signin.php" class="Lightbtn" id="signin-button">Sign In</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

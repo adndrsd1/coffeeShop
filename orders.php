@@ -25,7 +25,7 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="home-link" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="home-link" href="homeAdmin.php">Home</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="favorite-link" href="manageMenu.php">Menu</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="reservation-link" href="booking.php">Reservation</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="delivery-link" href="orders.php">Delivery</a></li>
@@ -38,21 +38,6 @@
                 </button>
             </div>
         </nav>
-
-        <!-- Home -->
-        <section class="home" id="home">
-            <div class="homeBox1">
-                <div class="home-text">
-                    <h1>Bean Bliss Coffee</h1>
-                    <h2>Brewing Joy in Every Cup</h2>
-                    <h3>Experience the freshness and warmth in every sip of Bean Bliss Coffee.<br></h3>
-                </div>
-                <div class="home-img">
-                    <img src="img/background1.png" alt="coffee">
-                </div>
-            </div>
-            <div class="homeBox2"></div>
-        </section>
     </div>
 
     <!-- Bootstrap JS -->
