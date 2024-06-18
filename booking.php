@@ -55,6 +55,7 @@
                         <th scope="col">Time</th>
                         <th scope="col">Guests</th>
                         <th scope="col">Special Requests</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -75,10 +76,11 @@
                                 echo "<td>" . $row['waktuReservasi'] . "</td>";
                                 echo "<td>" . $row['jumlahTamu'] . "</td>";
                                 echo "<td>" . $row['specialReq'] . "</td>";
+                                echo "<td><a href='deleteBooking.php?id=" . $row['id'] . "' class='Lightbtn'>Delete</a></td>";
                                 echo "</tr>";
                             }
                         } else {
-                            echo "<tr><td colspan='7'>No bookings found</td></tr>";
+                            echo "<tr><td colspan='9'>No bookings found</td></tr>";
                         }
                         $con->close();
                     ?>

@@ -5,11 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (signinForm) {
         signinForm.addEventListener('submit', function(event) {
             event.preventDefault(); 
-<<<<<<< HEAD
             window.location.href = 'home.php'; // Arahkan ke halaman home setelah login
-=======
-            window.location.href = 'index.html'; // Arahkan ke halaman home setelah login
->>>>>>> 1f5ccfa279a25ca983b2dfef83ba92955f86bbbd
         });
     }
 
@@ -17,11 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         signupForm.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
             // Here, you can add your AJAX call to register the user
-<<<<<<< HEAD
             window.location.href = 'signin.php';
-=======
-            window.location.href = 'profileForm.html';
->>>>>>> 1f5ccfa279a25ca983b2dfef83ba92955f86bbbd
         });
     }
 

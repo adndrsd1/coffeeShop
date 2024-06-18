@@ -126,7 +126,9 @@
                     include 'config.php';
                     $query = "SELECT * FROM daftar_menu";
                     $result = mysqli_query($con, $query);
-                    while ($row = mysqli_fetch_array($result)) {
+
+                    if (mysqli_num_rows($result) > 0)
+                        while ($row = mysqli_fetch_array($result)) {
                     ?>
                         <tr>
                             <td><?php echo $row['kategori'] ?></td>
@@ -202,7 +204,9 @@
                             </td>
                         </tr>
                     <?php
-                    }
+                        }else {
+                            echo "<tr><td colspan='5'>No data found!</td></tr>";
+                        }
                     ?>
                 </tbody>
             </table>

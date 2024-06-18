@@ -92,4 +92,10 @@ function deleteMenu($id) {
     mysqli_query($con, "DELETE FROM daftar_menu WHERE idMenu = $id");
     return mysqli_affected_rows($con);
 }
+
+function deleteBooking($id) {
+    global $con;
+    mysqli_query($con, "DELETE FROM reservasi WHERE id = $id");
+    return mysqli_affected_rows($con);
+}
 ?>
