@@ -66,29 +66,6 @@ window.addEventListener('scroll', function() {
 });*/
 
 // CART
-// Function to format number as currency (Rp. with thousand separators)
-function formatRupiah(number) {
-    return 'Rp. ' + number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-}
-
-// Function to update total
-function updateTotal() {
-    var cartContent = document.getElementsByClassName("cart-content")[0];
-    var cartBoxes = cartContent.getElementsByClassName("cart-box");
-    var total = 0;
-    for (var i = 0; i < cartBoxes.length; i++) {
-        var cartBox = cartBoxes[i];
-        var priceElement = cartBox.getElementsByClassName("cart-price")[0];
-        var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
-        var price = parseFloat(priceElement.innerText.replace("Rp. ", "").replace(/\./g, ""));
-        var quantity = quantityElement.value;
-        total += price * quantity;
-    }
-    total = Math.round(total * 100) / 100;
-    document.getElementsByClassName("total-price")[0].innerText = formatRupiah(total);
-}
-
-// Add to Cart
 document.addEventListener('DOMContentLoaded', () => {
     let cartItem = document.querySelector('.cart');
     let navbar = document.querySelector('.navbar'); // Assuming navbar element exists
