@@ -44,7 +44,7 @@ section{
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--darkBrown);
+  color: var(--brown1);
   font-weight: bolder;
 }
 .heading h1, .heading2 h1 {
@@ -130,7 +130,7 @@ section{
 }
 
 /*sign-In sign-up*/
-body.signin, body .signup{
+body.left, body.right{
   background-color: var(--brown5);
 }
 .box-area{
@@ -161,9 +161,17 @@ body.signin, body .signup{
    }
 }
 
+/*profile*/
+.containerProfile {
+  width: 30%;
+}
+.profileBox{
+  padding: 70px;
+}
+
 /*home cover*/
 .home {
-  background: var(--brown5);
+  background: var(--brown4);
   gap: 1rem;
 }
 .homeBox1 {
@@ -553,13 +561,13 @@ section.menuCarousel{
 .floating-button {
   width: 65px;
   height: 65px;
-  background: var(--brown1);
+  background: #74512D;
   border-radius: 50%;
-  color: var(--);
+  color: #EAD8C0;
   line-height: 65px;
   text-align: center;
   font-size: 23px;
-  box-shadow: 0 10px 25px -5px var(--brown0);
+  box-shadow: 0 10px 25px -5px #543310;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -567,7 +575,7 @@ section.menuCarousel{
   transition: all 0.3s;
 }
 .floating-button:hover {
-  box-shadow: 0 10px 25px var(--brown0);
+  box-shadow: 0 10px 25px #543310;
   transform: translateY(-5px);
 }
 .floating-button img {
@@ -581,7 +589,7 @@ section.menuCarousel{
   bottom: 110px;
   right: 25px;
   width: 300px;
-  background: var(--black);
+  background: white;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   border-radius: 8px;
   padding: 20px;
@@ -649,8 +657,8 @@ section.menuCarousel{
 .btn-buy {
   display: block;
   width: 100%;
-  background-color: var(--brown0);
-  color: var(--brown4);
+  background-color: #543310;
+  color: #EAD8C0;
   border: none;
   padding: 10px;
   font-size: 16px;
