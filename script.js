@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const signupForm = document.getElementById('signupForm');
 
     if (signinForm) {
-        signinForm.addEventListener('submit', function(event) {
-            event.preventDefault(); 
+        signinForm.addEventListener('submit', function (event) {
+            event.preventDefault();
 <<<<<<< HEAD
             window.location.href = 'home.php'; // Arahkan ke halaman home setelah login
 =======
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (signupForm) {
-        signupForm.addEventListener('submit', function(event) {
+        signupForm.addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent form from submitting normally
             // Here, you can add your AJAX call to register the user
 <<<<<<< HEAD
@@ -25,48 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-//js forgotPass, changePass, profileForm.
-});
+    //js forgotPass, changePass, profileForm.
 
-// Scrollspy implementation
-window.addEventListener('scroll', function() {
-    let sections = document.querySelectorAll('section');
-    let navLinks = document.querySelectorAll('.nav-link');
-    
-    sections.forEach(section => {
-        let top = window.scrollY;
-        let offset = section.offsetTop - 150;
-        let height = section.offsetHeight;
-        let id = section.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                document.querySelector('.nav-link[href*=' + id + ']').classList.add('active');
-            });
-        }
-    });
-});
-
-
-/*document.addEventListener('DOMContentLoaded', function () {
-    //transisi
-    const links = document.querySelectorAll('a');
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const href = this.getAttribute('href');
-            const currentPage = document.querySelector('.page');
-            currentPage.classList.add('page-hidden');
-            setTimeout(function() {
-                window.location.href = href;
-            }, 500); // Mengarahkan ke halaman baru setelah 0.5 detik (sesuai dengan durasi transisi CSS)
-        });
-    });
-});*/
-
-// CART
-document.addEventListener('DOMContentLoaded', () => {
+    // CART
     let cartItem = document.querySelector('.cart');
     let navbar = document.querySelector('.navbar'); // Assuming navbar element exists
     let searchForm = document.querySelector('.search-form'); // Assuming search-form element exists
@@ -81,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // FUNCTIONS FOR CART
     function ready() {
         // Remove Items from Cart
         let removeCartButtons = document.getElementsByClassName('cart-remove');
@@ -136,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let xhr = new XMLHttpRequest();
         xhr.open("POST", "add_to_database.php", true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 console.log(xhr.responseText);
             }
@@ -190,13 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         let cartBoxContent = `
-        <img src="${productImg}" alt="" class="cart-img">
-        <div class="detail-box">
-          <div class="cart-product-title">${title}</div>
-          <div class="cart-price">${price}</div>
-          <input type="number" value="1" min="1" class="cart-quantity">
-        </div>
-        <i class="fas fa-trash cart-remove"></i>`;
+    <img src="${productImg}" alt="" class="cart-img">
+    <div class="detail-box">
+      <div class="cart-product-title">${title}</div>
+      <div class="cart-price">${price}</div>
+      <input type="number" value="1" min="1" class="cart-quantity">
+    </div>
+    <i class="fas fa-trash cart-remove"></i>`;
         cartShopBox.innerHTML = cartBoxContent;
         cartItems.append(cartShopBox);
         cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener('click', removeCartItem);
@@ -227,3 +187,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ready();
 });
+
+// Scrollspy implementation
+window.addEventListener('scroll', function () {
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('.nav-link');
+
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 150;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                document.querySelector('.nav-link[href*=' + id + ']').classList.add('active');
+            });
+        }
+    });
+});
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
+    //transisi
+    const links = document.querySelectorAll('a');
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const href = this.getAttribute('href');
+            const currentPage = document.querySelector('.page');
+            currentPage.classList.add('page-hidden');
+            setTimeout(function() {
+                window.location.href = href;
+            }, 500); // Mengarahkan ke halaman baru setelah 0.5 detik (sesuai dengan durasi transisi CSS)
+        });
+    });
+});*/
