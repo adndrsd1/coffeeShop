@@ -20,6 +20,40 @@ document.addEventListener('DOMContentLoaded', function () {
 //js forgotPass, changePass, profileForm.
 });
 
+//profile
+document.getElementById('update-button').addEventListener('click', function() {
+    var isEditMode = this.dataset.editMode === 'true';
+    var elements = [
+      { id: 'username', type: 'text', value: 'Fatin' },
+      { id: 'email', type: 'email', value: 'FatinSyahira@gmail.com' },
+      { id: 'fullname', type: 'text', value: 'Fatin Syahira' },
+      { id: 'phone', type: 'tel', value: '81315225350' },
+      { id: 'address', type: 'text', value: 'Street/City/PostalCode' }
+    ];
+  
+    elements.forEach(function(element) {
+      var el = document.getElementById(element.id);
+      if (isEditMode) {
+        var input = document.createElement('span');
+        input.className = 'form-control form-control-lg bg-light fs-6';
+        input.id = element.id;
+        input.textContent = el.value;
+        el.parentNode.replaceChild(input, el);
+      } else {
+        var span = document.createElement('input');
+        span.className = 'form-control form-control-lg bg-light fs-6';
+        span.id = element.id;
+        span.type = element.type;
+        span.value = el.textContent;
+        span.required = true;
+        el.parentNode.replaceChild(span, el);
+      }
+    });
+  
+    this.dataset.editMode = !isEditMode;
+    this.innerHTML = isEditMode ? '<i class="fas fa-edit"></i> Update Information' : '<i class="fas fa-save"></i> Save Information';
+  });
+
 // Scrollspy implementation
 window.addEventListener('scroll', function() {
     let sections = document.querySelectorAll('section');
