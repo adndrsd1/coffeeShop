@@ -82,6 +82,7 @@ section{
 
 /*navigation bar*/
 .navbar { /*latar*/
+  position: sticky;
   background-color: var(--white);
   height: 70px;
   padding: 0.5rem;
@@ -669,4 +670,148 @@ section.deliveryCarousel{
 }
 .btn-buy:hover {
   background-color: #3e270b;
+}
+
+/* Welcome Section */
+section.aboutWelcome {
+  background: var(--brown5);
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.aboutWelcome .welcome-heading {
+  font-size: 3rem; /* Adjusted to match existing heading sizes */
+  color: var(--brown0);
+  font-weight: bolder;
+}
+
+.aboutWelcome .welcome-description {
+  color: var(--brown1);
+  margin-top: 20px;
+}
+
+/* About Us Section */
+section.aboutUs {
+  background: var(--white);
+  padding: 50px 10%;
+}
+
+.containerAboutUs {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Ensure items wrap on small screens */
+  justify-content: space-between;
+}
+
+.aboutUs-text {
+  font-size: 1rem;
+  flex: 1 1 27rem;
+  margin-bottom: 10px;
+}
+
+.aboutUs-text p {
+  text-align: justify;
+}
+
+.aboutUs-text h2 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.aboutUs-img {
+  flex: 1 1 15rem;
+}
+
+.aboutUs-img img {
+  width: 100%; /* Ensure image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the entire container */
+  max-width: calc(100% - 1.5rem); /* Adjust max-width to accommodate gap */
+  max-height: calc(100vh - 250px); /* Adjust max-height for smaller screens */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .containerAboutUs {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 1px; /* Reduce gap between stacked items */
+  }
+  
+  .aboutUs-text {
+    padding: 1rem;
+  }
+
+  .aboutUs-img {
+    max-width: calc(100% - 1.5rem); /* Adjust max-width to accommodate gap */
+    max-height: calc(100vh - 300px); /* Adjust max-height for smaller screens */
+  }
+
+  .aboutUs-img img {
+    width: 100%; /* Ensure image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    object-fit: cover;
+    aspect-ratio: 6/4;
+  }
+}
+
+
+/* Banner Section */
+section.banner {
+  background: var(--brown2);
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.banner .banner-heading {
+  font-size: 2rem; /* Adjusted to match existing heading sizes */
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Our Location Section */
+section.ourLocation {
+  background: var(--white);
+  padding: 50px 10%;
+}
+
+.containerOurLocation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Ensure items wrap on small screens */
+}
+
+.ourLocation-text {
+  font-size: 1rem;
+  flex: 1 1 21rem;
+  margin-bottom: 10px;
+}
+
+.ourLocation-text p {
+  text-align: justify;
+}
+
+.ourLocation-text h2 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.ourLocation-img {
+  flex: 1 1 21rem;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .containerOurLocation {
+    display:grid;
+    gap: 2rem;
+  }
+  .ourLocation-img {
+    margin: 0; /* Add space below the image */
+  }
 }
