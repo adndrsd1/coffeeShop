@@ -55,54 +55,49 @@
                 <span>Delivery Menu</span>
                 <h1>"Order your favorite now!"</h1>
             </div>
-            <!-- Menu Choice -->
+        </section>
+ 
+        <section class="deliveyCarousel">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/CaroselMenu1.1.png" class="d-block w-100" alt="First slide">
-                        <div class="carousel-caption d-flex justify-content-center align-items-end"
-                            style="height: 100%;">
-                            <a href="#deliveryMenu-hotCoffee" class="Lightbtn">Hot Coffee</a>
+                        <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
+                            <a href="#displayMenu-hotCoffee" class="Lightbtn">Hot Coffee</a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="img/CaroselMenu2.2.png" class="d-block w-100" alt="Second slide">
-                        <div class="carousel-caption d-flex justify-content-center align-items-end"
-                            style="height: 100%;">
-                            <a href="#deliveryMenu-icedCoffee" class="Lightbtn">Ice Coffee</a>
+                        <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
+                            <a href="#displayMenu-icedCoffee" class="Lightbtn">Ice Coffee</a>
                         </div>
                     </div>
 
                     <div class="carousel-item">
                         <img src="img/CaroselMenu3.3.png" class="d-block w-100" alt="Third slide">
-                        <div class="carousel-caption d-flex justify-content-center align-items-end"
-                            style="height: 100%;">
-                            <a href="#deliveryMenu-pastires" class="Lightbtn">Pastries</a>
+                        <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
+                            <a href="#displayMenu-pastires" class="Lightbtn">Pastries</a>
                         </div>
                     </div>
 
                     <div class="carousel-item">
                         <img src="img/CaroselMenu4.4.png" class="d-block w-100" alt="Third slide">
-                        <div class="carousel-caption d-flex justify-content-center align-items-end"
-                            style="height: 100%;">
-                            <a href="#deliveryMenu-snacks" class="Lightbtn">Snacks</a>
+                        <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
+                            <a href="#displayMenu-snacks" class="Lightbtn">Snacks</a>
                         </div>
-                    </div>
+                    </div>   
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </section>
-
         <!-- Menu -->
         <!--Note: Harusnya nanti mungkin bisa narik data dari database pake format php(??)-->
         <section class="deliveryMenu-hotCoffee" id="deliveryMenu-hotCoffee">
