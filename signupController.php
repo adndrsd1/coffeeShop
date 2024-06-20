@@ -1,10 +1,12 @@
 <?php
 include "config.php";
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $role = 'customer';
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,13 +38,14 @@ $password = $_POST['password'];
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
         <?php
             $verify_query = mysqli_query($con, "SELECT email from users WHERE email='$email'");
+
             if(mysqli_num_rows($verify_query) !=0){
                 echo "<div class='alert alert-danger' role='alert'>This email is already used, please try another one!</div>";
                 echo "<a href='signup.php'><button class='btn'>Try Again</button>";
             }
 
             else {
-                mysqli_query($con, "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')");
+                mysqli_query($con, "INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')");
                 echo "<div class='alert alert-success' role='alert'>Registration Succesfully!</div>";
                 echo "<a href='signin.php'><button class='btn'>Login</button>";                
             }

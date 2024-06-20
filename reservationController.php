@@ -7,7 +7,7 @@ $fullName = htmlspecialchars($data["fullName"]);
 $email = htmlspecialchars($data["email"]);
 $phone = htmlspecialchars($data["phone"]);
 $reservationDate = date('Y-m-d', strtotime($data["reservationDate"]));
-$reservationTime = date('H:i', strtotime($data["reservationTime"]));
+$reservationTime = htmlspecialchars($data["reservationTime"]);
 $amountGuest = htmlspecialchars($data["amountGuest"]);
 $specialReq = htmlspecialchars($data["specialReq"]);
 ?>

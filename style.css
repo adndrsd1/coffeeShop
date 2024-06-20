@@ -85,6 +85,7 @@ section{
   background-color: var(--white);
   height: 70px;
   padding: 0.5rem;
+  position: sticky;
 }
 .navbar-brand { /*logo*/
   display: flex;

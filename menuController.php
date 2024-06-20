@@ -59,8 +59,6 @@ function uploadImage() {
 function updateMenu($data) {
     global $con;
 
-    var_dump($data);
-
     $id = $data["idMenu"];
     $kategori = htmlspecialchars($data["kategori"]);
     $namaMenu = htmlspecialchars($data["namaMenu"]);
