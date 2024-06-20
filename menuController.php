@@ -59,8 +59,6 @@ function uploadImage() {
 function updateMenu($data) {
     global $con;
 
-    var_dump($data);
-
     $id = $data["idMenu"];
     $kategori = htmlspecialchars($data["kategori"]);
     $namaMenu = htmlspecialchars($data["namaMenu"]);
@@ -90,6 +88,12 @@ function updateMenu($data) {
 function deleteMenu($id) {
     global $con;
     mysqli_query($con, "DELETE FROM daftar_menu WHERE idMenu = $id");
+    return mysqli_affected_rows($con);
+}
+
+function deleteBooking($id) {
+    global $con;
+    mysqli_query($con, "DELETE FROM reservasi WHERE id = $id");
     return mysqli_affected_rows($con);
 }
 ?>

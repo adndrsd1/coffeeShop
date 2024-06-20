@@ -205,7 +205,7 @@
                     </div>
                     <h2>Our menu features</h2>
                     <p>A diverse selection of delectable dishes, each designed to tantalize your taste buds and satisfy your cravings. From hearty coffee options to sumptuous pastries and exquisite snaks, we have something to delight every palate.</p>
-                    <a href="menu.html" class="btn">Chcek Our Menu</a>
+                    <a href="menu.html" class="btn">Check Our Menu</a>
                 </div>
             </div>
         </section>
@@ -225,7 +225,7 @@
                         <li>2. Provide your contact information and any special requests.</li>
                         <li>3. Receive instant confirmation of your booking via email.</li>
                     </ol>
-                    <a href="reservation.html" class="btn">Save Your Sit</a>
+                    <a href="reservation.php" class="btn">Save Your Sit</a>
                 </div>
                 <div class="infoHome-img">
                     <div id="carouselReservationHome" class="carousel slide" data-bs-ride="true">

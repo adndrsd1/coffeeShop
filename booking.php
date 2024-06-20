@@ -47,7 +47,6 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
                         <th scope="col">Full Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone Number</th>
@@ -55,6 +54,7 @@
                         <th scope="col">Time</th>
                         <th scope="col">Guests</th>
                         <th scope="col">Special Requests</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,7 +67,6 @@
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
                                 echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
                                 echo "<td>" . $row['fullName'] . "</td>";
                                 echo "<td>" . $row['email'] . "</td>";
                                 echo "<td>" . $row['phoneNumber'] . "</td>";
@@ -75,16 +74,18 @@
                                 echo "<td>" . $row['waktuReservasi'] . "</td>";
                                 echo "<td>" . $row['jumlahTamu'] . "</td>";
                                 echo "<td>" . $row['specialReq'] . "</td>";
+                                echo "<td><a href='deleteBooking.php?id=" . $row['id'] . "' class='Lightbtn'>Delete</a></td>";
                                 echo "</tr>";
                             }
                         } else {
-                            echo "<tr><td colspan='7'>No bookings found</td></tr>";
+                            echo "<tr><td colspan='8'>No bookings found</td></tr>";
                         }
                         $con->close();
                     ?>
                 </tbody>
             </table>
         </div>
+    </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

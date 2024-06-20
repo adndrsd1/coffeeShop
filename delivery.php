@@ -81,9 +81,16 @@
                     </div>
 
                     <div class="carousel-item">
+<<<<<<< HEAD
+                        <img src="img/CaroselMenu4.4.png" class="d-block w-100" alt="Fourth slide">
+                        <div class="carousel-caption d-flex justify-content-center align-items-end"
+                            style="height: 100%;">
+                            <a href="#deliveryMenu-snacks" class="Lightbtn">Snacks</a>
+=======
                         <img src="img/CaroselMenu4.4.png" class="d-block w-100" alt="Third slide">
                         <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
                             <a href="#displayMenu-snacks" class="Lightbtn">Snacks</a>
+>>>>>>> 4d3a15677897bc8b2ed95d78761c4b9727122c31
                         </div>
                     </div>   
                 </div>
@@ -98,6 +105,46 @@
                 </button>
             </div>
         </section>
+<<<<<<< HEAD
+
+        <!-- Menu Based on Category -->
+        <?php
+            include 'config.php';
+            $categoriesQuery = "SELECT DISTINCT kategori FROM daftar_menu";
+            $categoriesResult = mysqli_query($con, $categoriesQuery);
+            while ($kategori = mysqli_fetch_assoc($categoriesResult)) {
+                $categoryName = $kategori['kategori'];
+                echo "<section class='deliveryMenu-{$categoryName}' id='deliveryMenu-{$categoryName}'>";
+                echo "<div class='heading'>";
+                echo "<span>{$categoryName} Selection</span>";
+                echo "<h1>\"Enjoy our delicious {$categoryName}\"</h1>";
+                echo "</div>";
+                echo "<div class='box-container'>";
+                echo "<div class='row'>";
+            
+                $menuQuery = "SELECT * FROM daftar_menu WHERE kategori = '$categoryName'";
+                $menuResult = mysqli_query($con, $menuQuery);
+                while ($menu = mysqli_fetch_assoc($menuResult)) {
+                    echo "<div class='col-md-4 mb-4'>";
+                    echo "<div class='box' id='box{$menu['idMenu']}'>";
+                    echo "<img src='img/{$menu['gambar']}' alt='' class='product-img'>";
+                    echo "<h3 class='product-title'>{$menu['namaMenu']}</h3>";
+                    echo "<div class='price'>Rp {$menu['harga']}</div>";
+                    if ($menu['stok'] > 0) {
+                        echo "<a class='btn add-cart' data-id='{$menu['idMenu']}'>Add to Cart</a>";
+                    } else {
+                        echo "<a class='btn btn-secondary' disabled>Out of Stock</a>";
+                    }
+                    echo "</div>";
+                    echo "</div><br />";
+                }
+            
+                echo "</div>";
+                echo "</div>";
+                echo "</section>";
+            }
+        ?>
+=======
         <!-- Menu -->
         <!--Note: Harusnya nanti mungkin bisa narik data dari database pake format php(??)-->
         <section class="deliveryMenu-hotCoffee" id="deliveryMenu-hotCoffee">
@@ -174,167 +221,8 @@
                 </div>
             </div>
         </section>
+>>>>>>> 4d3a15677897bc8b2ed95d78761c4b9727122c31
 
-        <section class="deliveryMenu-icedCoffee" id="deliveryMenu-icedCoffee">
-            <div class="heading">
-                <span>Iced Coffee Selection</span>
-                <h1>"Refresh and cool down"</h1>
-            </div>
-            <div class="box-container">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee1">
-                            <img src="img/menuIcedCoffee1.png" alt="" class="product-img">
-                            <h3 class="product-title">Vietnamese Iced Coffee</h3>
-                            <div class="price">Rp 20000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee2">
-                            <img src="img/menuIcedCoffee2.png" alt="" class="product-img">
-                            <h3 class="product-title">Cold Brew</h3>
-                            <div class="price">Rp 15.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee3">
-                            <img src="img/menuIcedCoffee3.png" alt="" class="product-img">
-                            <h3 class="product-title">Iced Coffee</h3>
-                            <div class="price">Rp 25.500</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee4">
-                            <img src="img/menuIcedCoffee4.png" alt="" class="product-img">
-                            <h3 class="product-title">Iced Cappuccino</h3>
-                            <div class="price">Rp 15.300</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee5">
-                            <img src="img/menuIcedCoffee5.png" alt="" class="product-img">
-                            <h3 class="product-title">Iced Americano</h3>
-                            <div class="price">Rp 15.400</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee6">
-                            <img src="img/menuIcedCoffee6.png" alt="" class="product-img">
-                            <h3 class="product-title">Iced Latte</h3>
-                            <div class="price">Rp 20.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee7">
-                            <img src="img/menuIcedCoffee7.png" alt="" class="product-img">
-                            <h3 class="product-title">Mocha Frappuccino</h3>
-                            <div class="price">Rp 25.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxIcedCoffee8">
-                            <img src="img/menuIcedCoffee8.png" alt="" class="product-img">
-                            <h3 class="product-title">Caramel Macchiato</h3>
-                            <div class="price">Rp 25.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                </div>
-            </div>
-        </section>
-
-        <section class="deliveryMenu-pastries" id="deliveryMenu-pastries">
-            <div class="heading">
-                <span>Pastries</span>
-                <h1>"Savor the Flaky Layers of Delight!"</h1>
-            </div>
-            <div class="box-container">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxPastries1">
-                            <img src="img/menuPastries1.png" alt="" class="product-img">
-                            <h3 class="product-title">Krosian</h3>
-                            <div class="price">Rp 20000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxPastries2">
-                            <img src="img/menuPastries2.png" alt="" class="product-img">
-                            <h3 class="product-title">Donut</h3>
-                            <div class="price">Rp 15.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxPastries3">
-                            <img src="img/menuPastries3.png" alt="" class="product-img">
-                            <h3 class="product-title">Cookies</h3>
-                            <div class="price">Rp 25.500</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxPastries4">
-                            <img src="img/menuPastries4.png" alt="" class="product-img">
-                            <h3 class="product-title">Waffle</h3>
-                            <div class="price">Rp 15.300</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                </div>
-            </div>
-        </section>
-
-        <section class="deliveryMenu-snacks" id="deliveryMenu-snacks">
-            <div class="heading">
-                <span>Pastries</span>
-                <h1>"Savor the Flaky Layers of Delight!"</h1>
-            </div>
-            <div class="box-container">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxSnacks1">
-                            <img src="img/menuSnacks1.png" alt="" class="product-img">
-                            <h3 class="product-title">Sandwich</h3>
-                            <div class="price">Rp 20000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxSnacks2">
-                            <img src="img/menuSnacks2.png" alt="" class="product-img">
-                            <h3 class="product-title">Fortune Cookie</h3>
-                            <div class="price">Rp 15.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxSnacks3">
-                            <img src="img/menuSnacks3.png" alt="" class="product-img">
-                            <h3 class="product-title">Chips</h3>
-                            <div class="price">Rp 25.500</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxSnacks4">
-                            <img src="img/menuSnacks4.png" alt="" class="product-img">
-                            <h3 class="product-title">French Fries</h3>
-                            <div class="price">Rp 15.300</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                </div>
-            </div>
-        </section>
 
         <!-- CART SECTION -->
         <div class="floating-container">

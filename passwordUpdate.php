@@ -1,9 +1,16 @@
 <?php
 include "config.php";
 
-$username = mysqli_real_escape_string($con, $_POST['username']);
-$password = mysqli_real_escape_string($con, $_POST['password']);
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+if(isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +18,6 @@ $password = mysqli_real_escape_string($con, $_POST['password']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     
@@ -22,7 +28,7 @@ $password = mysqli_real_escape_string($con, $_POST['password']);
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
 </head>
-<body class="signin">
+<body class="left">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand me-auto" href="index.html"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
@@ -31,27 +37,20 @@ $password = mysqli_real_escape_string($con, $_POST['password']);
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
-            <?php
-                $query = "SELECT * FROM users WHERE username='$username'";
-                $result = mysqli_query($con, $query);
-                $row = mysqli_fetch_assoc($result);
-
-                if($row && $row['password'] === $password) {
-                    $_SESSION['username'] = $row['username'];
-                    $_SESSION['role'] = $row['role'];
-
-                    if($row['role'] == 'admin') {
-                        header("Location: homeAdmin.php");
-                    }
-                    else {
-                        header("Location: homeCust.php");
-                    }
-                }
-                else {
-                    echo "<div class='alert alert-danger' role='alert'>Wrong username or password</div>";
-                    echo "<a href='signin.php'><button class='btn'>Try Again</button>";
-                }
-            ?>
+        <?php
+            $verify_query = mysqli_query($con, "SELECT email from users WHERE email='$email'");
+            $row = mysqli_fetch_assoc($verify_query);
+            
+            if($row > 0) {
+                mysqli_query($con, "UPDATE users SET password='$password' WHERE email='$email'");
+                echo "<div class='alert alert-success' role='alert'>Password has been changed successfully!</div>";
+                echo "<a href='signin.php'><button class='btn'>Sign In</button>";
+            }
+            else {
+                echo "<div class='alert alert-danger' role='alert'>Email not found!</div>";
+                echo "<a href='forgotPassword.php'><button class='btn'>Try Again</button>";
+            }
+        ?>
         </div>
     </div>
     
