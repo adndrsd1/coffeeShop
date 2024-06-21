@@ -79,11 +79,9 @@
                             <a href="#displayMenu-pastires" class="Lightbtn">Pastries</a>
                         </div>
                     </div>
-
                     <div class="carousel-item">
                         <img src="img/CaroselMenu4.4.png" class="d-block w-100" alt="Fourth slide">
-                        <div class="carousel-caption d-flex justify-content-center align-items-end"
-                            style="height: 100%;">
+                        <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
                             <a href="#deliveryMenu-snacks" class="Lightbtn">Snacks</a>
                         </div>
                     </div>   

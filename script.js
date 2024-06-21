@@ -4,13 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (signinForm) {
         signinForm.addEventListener('submit', function(event) {
-<<<<<<< HEAD
             //event.preventDefault(); 
             //window.location.href = 'index.html'; // Arahkan ke halaman home setelah login
-=======
-            event.preventDefault(); 
-            window.location.href = 'index.html'; // Arahkan ke halaman home setelah login
->>>>>>> 4d3a15677897bc8b2ed95d78761c4b9727122c31
         });
     }
 
@@ -18,50 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
         signupForm.addEventListener('submit', function(event) {
             //event.preventDefault(); // Prevent form from submitting normally
             // Here, you can add your AJAX call to register the user
-<<<<<<< HEAD
             // window.location.href = 'profileForm.html';
-=======
-            window.location.href = 'profileForm.html';
->>>>>>> 4d3a15677897bc8b2ed95d78761c4b9727122c31
         });
     }
 
 //js forgotPass, changePass, profileForm.
 });
-
-//profile
-document.getElementById('update-button').addEventListener('click', function() {
-    var isEditMode = this.dataset.editMode === 'true';
-    var elements = [
-      { id: 'username', type: 'text', value: 'Fatin' },
-      { id: 'email', type: 'email', value: 'FatinSyahira@gmail.com' },
-      { id: 'fullname', type: 'text', value: 'Fatin Syahira' },
-      { id: 'phone', type: 'tel', value: '81315225350' },
-      { id: 'address', type: 'text', value: 'Street/City/PostalCode' }
-    ];
-  
-    elements.forEach(function(element) {
-      var el = document.getElementById(element.id);
-      if (isEditMode) {
-        var input = document.createElement('span');
-        input.className = 'form-control form-control-lg bg-light fs-6';
-        input.id = element.id;
-        input.textContent = el.value;
-        el.parentNode.replaceChild(input, el);
-      } else {
-        var span = document.createElement('input');
-        span.className = 'form-control form-control-lg bg-light fs-6';
-        span.id = element.id;
-        span.type = element.type;
-        span.value = el.textContent;
-        span.required = true;
-        el.parentNode.replaceChild(span, el);
-      }
-    });
-  
-    this.dataset.editMode = !isEditMode;
-    this.innerHTML = isEditMode ? '<i class="fas fa-edit"></i> Update Information' : '<i class="fas fa-save"></i> Save Information';
-  });
 
 // Scrollspy implementation
 window.addEventListener('scroll', function() {
@@ -148,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             orderDetails.push({ title: title, price: priceValue, quantity: quantity, subtotal_amount: subtotalAmount });
         }
 
-        // Generate a unique order code (could use timestamp or a random string)
+        // Generate a unique order code
         let orderCode = Date.now();
 
         // Send data to server using AJAX
@@ -179,8 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function for "When quantity changes"
     function quantityChanged(event) {
         let input = event.target;
+        let stock = parseInt(input.getAttribute("data-stock")); // buat cek input > stock
         if (isNaN(input.value) || input.value <= 0) {
             input.value = 1;
+        } else if (input.value > stock) {
+            alert("Quantity exceeds stock available");
+            input.value = stock;
         }
         updateTotal();
     }
@@ -196,13 +157,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check stock
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "check_stock.php", true);
+        xhr.open("POST", "checkStock.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 let response = JSON.parse(xhr.responseText);
                 if (response.stock > 0) {
-                    addProductToCart(title, price, productImg, productId);
+                    addProductToCart(title, price, productImg, productId, response.stock);
                     updateTotal();
                 } else {
                     alert("This product is out of stock!");
@@ -212,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         xhr.send("id=" + productId);
     }
 
-    function addProductToCart(title, price, productImg) {
+    function addProductToCart(title, price, productImg, productId, productStock) {
         let cartShopBox = document.createElement("div");
         cartShopBox.classList.add("cart-box");
         let cartItems = document.getElementsByClassName("cart-content")[0];
@@ -228,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="detail-box">
           <div class="cart-product-title">${title}</div>
           <div class="cart-price">${price}</div>
-          <input type="number" value="1" min="1" class="cart-quantity">
+          <input type="number" value="1" min="1" class="cart-quantity" data-stock="${productStock}">
         </div>
         <i class="fas fa-trash cart-remove"></i>`;
         cartShopBox.innerHTML = cartBoxContent;
@@ -260,4 +221,74 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     ready();
+});
+
+// PROFILE
+document.addEventListener('DOMContentLoaded', function() {
+    const profileForm = document.getElementById('profile-button');
+    const updateForm = document.getElementById('update-button');
+    const logoutButton = document.getElementById('logout-button');
+
+    // Fetch and display user profile data
+    fetchProfileData();
+
+    // Function to fetch user profile data
+    function fetchProfileData() {
+        fetch('profile.php')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('username').textContent = data.username;
+                document.getElementById('email').textContent = data.email;
+                document.getElementById('fullname').textContent = data.fullname;
+                document.getElementById('phone').textContent = data.phone;
+                document.getElementById('address').textContent = data.address;
+            })
+            .catch(error => console.error('Error fetching profile data:', error));
+    }
+    
+    updateForm.addEventListener('click', function() {
+        window.location.href = 'profileForm.php';
+    });
+
+    // Update profile form submit handler
+    profileForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let formData = new FormData(updateForm);
+        let updateURL = 'updateProfile.php';
+
+        fetch(updateURL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    fetchProfileData();
+                } else {
+                    alert('Failed to update profile');
+                }
+            })
+            .catch(error => console.error('Error updating profile:', error));
+    });
+});
+
+// LOGOUT
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutButton = document.getElementById('logout-button');
+
+    logoutButton.addEventListener('click', function() {
+        fetch('logout.php', {
+            method: 'POST'
+        })
+        .then(response => {
+            if (response.ok) {
+                window.location.href = 'index.html';
+            } else {
+                alert('Logout failed.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
 });
