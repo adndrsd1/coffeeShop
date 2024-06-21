@@ -79,18 +79,10 @@
                             <a href="#displayMenu-pastires" class="Lightbtn">Pastries</a>
                         </div>
                     </div>
-
                     <div class="carousel-item">
-<<<<<<< HEAD
-                        <img src="img/CaroselMenu4.4.png" class="d-block w-100" alt="Fourth slide">
-                        <div class="carousel-caption d-flex justify-content-center align-items-end"
-                            style="height: 100%;">
-                            <a href="#deliveryMenu-snacks" class="Lightbtn">Snacks</a>
-=======
                         <img src="img/CaroselMenu4.4.png" class="d-block w-100" alt="Third slide">
                         <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
                             <a href="#displayMenu-snacks" class="Lightbtn">Snacks</a>
->>>>>>> 4d3a15677897bc8b2ed95d78761c4b9727122c31
                         </div>
                     </div>   
                 </div>
@@ -105,7 +97,6 @@
                 </button>
             </div>
         </section>
-<<<<<<< HEAD
 
         <!-- Menu Based on Category -->
         <?php
@@ -144,84 +135,6 @@
                 echo "</section>";
             }
         ?>
-=======
-        <!-- Menu -->
-        <!--Note: Harusnya nanti mungkin bisa narik data dari database pake format php(??)-->
-        <section class="deliveryMenu-hotCoffee" id="deliveryMenu-hotCoffee">
-            <div class="heading">
-                <span>Hot Coffee Selection</span>
-                <h1>"Indulge in the Warmth of Every Sip"</h1>
-            </div>
-            <div class="box-container">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffe1">
-                            <img src="img/menuHotCoffee1.png" alt="" class="product-img">
-                            <h3 class="product-title">Cappuccino</h3>
-                            <div class="price">Rp 20000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffe2">
-                            <img src="img/menuHotCoffee2.png" alt="" class="product-img">
-                            <h3 class="product-title">Latte</h3>
-                            <div class="price">Rp 15.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffe3">
-                            <img src="img/menuHotCoffee3.png" alt="" class="product-img">
-                            <h3 class="product-title">Mocha</h3>
-                            <div class="price">Rp 25.500</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffee4">
-                            <img src="img/menuHotCoffee4.png" alt="" class="product-img">
-                            <h3 class="product-title">Hot Chocolate</h3>
-                            <div class="price">Rp 15.300</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffee5">
-                            <img src="img/menuHotCoffee5.png" alt="" class="product-img">
-                            <h3 class="product-title">Americano</h3>
-                            <div class="price">Rp 15.400</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffee6">
-                            <img src="img/menuHotCoffee6.png" alt="" class="product-img">
-                            <h3 class="product-title">Espresso</h3>
-                            <div class="price">Rp 20.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffe7">
-                            <img src="img/menuHotCoffee7.png" alt="" class="product-img">
-                            <h3 class="product-title">Macchiato</h3>
-                            <div class="price">Rp 25.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                    <div class="col-md-4 mb-4">
-                        <div class="box" id="boxHotCoffe8">
-                            <img src="img/menuHotCoffee8.png" alt="" class="product-img">
-                            <h3 class="product-title">Flat White</h3>
-                            <div class="price">Rp 25.000</div>
-                            <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                        </div>
-                    </div><br />
-                </div>
-            </div>
-        </section>
->>>>>>> 4d3a15677897bc8b2ed95d78761c4b9727122c31
 
 
         <!-- CART SECTION -->

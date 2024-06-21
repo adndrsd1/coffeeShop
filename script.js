@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             orderDetails.push({ title: title, price: priceValue, quantity: quantity, subtotal_amount: subtotalAmount });
         }
 
-        // Generate a unique order code (could use timestamp or a random string)
+        // Generate a unique order code
         let orderCode = Date.now();
 
         // Send data to server using AJAX
@@ -136,8 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function for "When quantity changes"
     function quantityChanged(event) {
         let input = event.target;
+        let stock = parseInt(input.getAttribute("data-stock")); // buat cek input > stock
         if (isNaN(input.value) || input.value <= 0) {
             input.value = 1;
+        } else if (input.value > stock) {
+            alert("Quantity exceeds stock available");
+            input.value = stock;
         }
         updateTotal();
     }
@@ -153,13 +157,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check stock
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "check_stock.php", true);
+        xhr.open("POST", "checkStock.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 let response = JSON.parse(xhr.responseText);
                 if (response.stock > 0) {
-                    addProductToCart(title, price, productImg, productId);
+                    addProductToCart(title, price, productImg, productId, response.stock);
                     updateTotal();
                 } else {
                     alert("This product is out of stock!");
@@ -169,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         xhr.send("id=" + productId);
     }
 
-    function addProductToCart(title, price, productImg) {
+    function addProductToCart(title, price, productImg, productId, productStock) {
         let cartShopBox = document.createElement("div");
         cartShopBox.classList.add("cart-box");
         let cartItems = document.getElementsByClassName("cart-content")[0];
@@ -185,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="detail-box">
           <div class="cart-product-title">${title}</div>
           <div class="cart-price">${price}</div>
-          <input type="number" value="1" min="1" class="cart-quantity">
+          <input type="number" value="1" min="1" class="cart-quantity" data-stock="${productStock}">
         </div>
         <i class="fas fa-trash cart-remove"></i>`;
         cartShopBox.innerHTML = cartBoxContent;
