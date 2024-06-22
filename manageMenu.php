@@ -31,8 +31,8 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="home-link" href="homeAdmin.php">Home</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" id="favorite-link" href="manageMenu.php">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" id="home-link" href="homeAdmin.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="favorite-link" href="manageMenu.php">Menu</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="reservation-link" href="booking.php">Reservation</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="delivery-link" href="orders.php">Delivery</a></li>
                         </ul>

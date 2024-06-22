@@ -20,6 +20,25 @@ document.addEventListener('DOMContentLoaded', function () {
 //js forgotPass, changePass, profileForm.
 });
 
+// profile dropdown
+document.getElementById('profile-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    var dropdown = document.getElementById('profile-dropdown');
+    dropdown.classList.toggle('show');
+});
+
+window.onclick = function(event) {
+    if (!event.target.matches('#profile-button')) {
+        var dropdowns = document.getElementsByClassName('dropdown-menu');
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
 // Scrollspy implementation
 window.addEventListener('scroll', function() {
     let sections = document.querySelectorAll('section');

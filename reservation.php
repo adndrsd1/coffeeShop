@@ -95,22 +95,55 @@
             </div>
         </section>
         
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="container my-5">
-                <h2 class="text-center mb-4">Contact Us</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>Our Location</h5>
-                        <p>123 Coffee Street, Jakarta, Indonesia</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Contact Information</h5>
-                        <p>Email: info@beanbliss.com</p>
-                        <p>Phone: +62 123 456 7890</p>
-                    </div>
+        <!-- Footer Section -->
+        <section class="footer" id="footer">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="footer-container my-5">
+                <div class="logo">
+                    <img src="img/logo1.png" class="img">
+                </div>
+                <div class="location">
+                    <h5>Our Location</h5>
+                    <p>123 Coffee Street, Jakarta, Indonesia</p>
+                </div>
+                <div class="Info">
+                    <h5>Contact Information</h5>
+                    <p>Email: info@beanbliss.com</p>
+                    <p>Phone: +62 123 456 7890</p>
                 </div>
             </div>
+            <div class="kelompok">
+                <div class="row mt-4">
+                    <hr /><br />
+                    <div class="col-md-12">
+                        <div class="text-left">
+                            <h5>© 2024 Kelompok 2</h5>
+                        </div>
+                        <div class="anggota">
+                            <div class="text-center flex-grow-1">
+                                <p class="members">Nisaul Husna</p>
+                                <p class="numbers">2210511055</p>
+                            </div>
+                            <div class="text-center flex-grow-1">
+                                <p class="members">Adinda Rizki Sya'bana Diva</p>
+                                <p class="numbers">2210511056</p>
+                            </div>
+                            <div class="text-center flex-grow-1">
+                                <p class="members">Mahira Afifa Mulia</p>
+                                <p class="numbers">2210511071</p>
+                            </div>
+                            <div class="text-center flex-grow-1">
+                                <p class="members">Edwina Martha Putri</p>
+                                <p class="numbers">2210511072</p>
+                            </div>
+                            <div class="text-right">
+                                <a href="https://www.upnvj.ac.id/" target="_blank"><img src="img/upn.png"
+                                        class="logo-upn">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </div>
 
