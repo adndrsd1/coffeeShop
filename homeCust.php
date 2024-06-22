@@ -38,11 +38,11 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="#" class="Lightbtn" id="profile-button"><i class="fas fa-user"></i></a>
-                    <div class="dropdown-menu" id="profile-dropdown">
-                        <a class="dropdown-item" href="profile.php">Update Profile</a>
-                        <a class="dropdown-item" href="logout.php">Log Out</a>
-                    </div>
+                    <a href="#" class="btn btn-light" id="profile-button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-button">
+                        <li><a class="dropdown-item" href="profile.php">Update Profile</a></li>
+                        <li><a class="dropdown-item" href="logout.php">Log Out</a></li>
+                    </ul>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

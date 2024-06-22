@@ -28,6 +28,11 @@ if (!isset($_SESSION['id'])) {
     </nav>
 
     <div class="profileContainer">
+        <div class="container mt-4">
+            <div class="input-group mb-3 justify-content-start">
+                <button type="button" class="btn btn-secondary" onclick="history.back()"><i class="fas fa-arrow-left"></i> Back</button>
+            </div>
+        </div>
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
             <div class="row border rounded-5 p-3 bg-white shadow box-area">
                 <!---form--->
@@ -64,7 +69,7 @@ if (!isset($_SESSION['id'])) {
                             </div>
                             <div class="input-group mb-3 justify-content-end">
                                 <button id="logout-button" type="submit" name="submit" value="logout" class="btn btn-lg w-30 fs-6 Lightbtn end"><i class="fas fa-sign-out-alt"></i> Log-out</button>
-                            </div>
+                            </div>        
                         </div>
                     </form>                      
                 </div> 
