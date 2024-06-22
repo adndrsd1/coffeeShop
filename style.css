@@ -168,6 +168,31 @@ body.left, body.right{
   padding-top: 100px;
 }
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
 /*home cover*/
 .home {
   background: var(--brown4);
