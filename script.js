@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to fetch user profile data
     function fetchProfileData() {
-        fetch('profile.php')
+        fetch('profileForm.php')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('username').textContent = data.username;

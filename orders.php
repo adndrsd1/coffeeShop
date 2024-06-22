@@ -41,7 +41,7 @@
     </div>
 
     <!-- View Bookings -->
-    <section class="home" id="home">
+    <section class="homeAdmin" id="homeAdmin">
         <div class="container my-5">
             <h2 class="text-center mb-4">Orders</h2>
             <table class="table table-striped">

@@ -47,7 +47,8 @@ if(isset($_POST['submit'])){
             else {
                 mysqli_query($con, "INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')");
                 echo "<div class='alert alert-success' role='alert'>Registration Succesfully!</div>";
-                echo "<a href='signin.php'><button class='btn'>Login</button>";                
+                // echo "<a href='signin.php'><button class='btn'>Login</button>"; 
+                header('Location: profileForm.php');         
             }
         ?>
         </div>
