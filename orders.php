@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bean Bliss - Home</title>
+    <title>Bean Bliss - Order</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -39,6 +39,51 @@
             </div>
         </nav>
     </div>
+
+    <!-- View Bookings -->
+    <section class="home" id="home">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Orders</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Kode Pesanan</th>
+                        <th scope="col">Kode Menu</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jumlah</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Total Harga</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        require 'config.php';
+
+                        $query = "SELECT * FROM pesan";
+                        $result = $con->query($query);
+
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $row['kodePesanan'] . "</td>";
+                                echo "<td>" . $row['kodeMenu'] . "</td>";
+                                echo "<td>" . $row['nama'] . "</td>";
+                                echo "<td>" . $row['jumlah'] . "</td>";
+                                echo "<td>" . $row['harga'] . "</td>";
+                                echo "<td>" . $row['totalHarga'] . "</td>";
+                                echo "<td><a href='deleteOrder.php?id=" . $row['id'] . "' class='Lightbtn'>Delete</a></td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='8'>No orders found</td></tr>";
+                        }
+                        $con->close();
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

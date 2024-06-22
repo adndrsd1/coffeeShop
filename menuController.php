@@ -96,4 +96,10 @@ function deleteBooking($id) {
     mysqli_query($con, "DELETE FROM reservasi WHERE id = $id");
     return mysqli_affected_rows($con);
 }
+
+function deleteOrder($id) {
+    global $con;
+    mysqli_query($con, "DELETE FROM pesan WHERE id = $id");
+    return mysqli_affected_rows($con);
+}
 ?>
