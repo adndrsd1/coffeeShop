@@ -120,7 +120,8 @@
                     echo "<div class='box' id='box{$menu['idMenu']}'>";
                     echo "<img src='img/{$menu['gambar']}' alt='' class='product-img'>";
                     echo "<h3 class='product-title'>{$menu['namaMenu']}</h3>";
-                    echo "<div class='price'>Rp {$menu['harga']}</div>";
+                    $formattedPrice = number_format($menu['harga'], 0, ',', '.');
+                    echo "<div class='price'>Rp {$formattedPrice}</div>";
                     if ($menu['stok'] > 0) {
                         echo "<a class='btn add-cart' data-id='{$menu['idMenu']}'>Add to Cart</a>";
                     } else {
@@ -135,7 +136,6 @@
                 echo "</section>";
             }
         ?>
-
 
         <!-- CART SECTION -->
         <div class="floating-container">

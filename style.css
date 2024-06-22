@@ -675,7 +675,7 @@ section.deliveryCarousel{
 
 /* Welcome Section */
 section.aboutWelcome {
-  background: var(--brown5);
+  background: var(--brown4);
   padding: 50px 10%;
   text-align: center;
 }
@@ -815,4 +815,14 @@ section.ourLocation {
   .ourLocation-img {
     margin: 0; /* Add space below the image */
   }
+}
+
+/* Banner Section */
+section.homeAdmin {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--brown3);
+  padding: 90px 10% 100% 10%;
+  text-align: center;
 }
