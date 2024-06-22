@@ -49,7 +49,7 @@
                             <input type="password" class="form-control form-control-lg bg-light fs-6" name="confirmPassword" placeholder="Confirm Password" required>
                         </div>
                         <div class="input-group mb-3">
-                           <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" id="send-button">Send</button>
+                           <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" id="reset-button">Reset</button>
                         </div>
                     </div>
                 </form>
