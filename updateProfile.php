@@ -8,6 +8,8 @@ if (!isset($_SESSION['id'])) {
 }
 
 $user_id = $_SESSION['id'];
+$username = mysqli_real_escape_string($con, $_POST['username']);
+$email = mysqli_real_escape_string($con, $_POST['email']);
 $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
 $phone = mysqli_real_escape_string($con, $_POST['phone']);
 $address = mysqli_real_escape_string($con, $_POST['address']);

@@ -63,7 +63,7 @@ function updateMenu($data) {
     $kategori = htmlspecialchars($data["kategori"]);
     $namaMenu = htmlspecialchars($data["namaMenu"]);
     $harga = htmlspecialchars($data["harga"]);
-    $gambarLama = htmlspecialchars($data["gambarLama"]);
+    $gambarLama = htmlspecialchars($data["gambar"]);
 
     // check if user upload new image
     if($_FILES['gambar']['error'] === 4) {

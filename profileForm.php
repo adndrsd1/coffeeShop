@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header('Location: signin.php');
+    header('Location: profile.php');
     exit;
 }
 
@@ -62,14 +62,14 @@ if (!$user) {
                             <small class="text-wrap text-center mb-3" style="width: 17rem; color: #000;">Please take a moment to complete your profile information</small>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Full Name" name="fullname" value="<?php echo htmlspecialchars($user['fullname']); ?>" required>
+                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Full Name" name="fullname" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="tel" class="form-control form-control-lg bg-light fs-6" placeholder="Phone Number" name="phone" value="<?php echo htmlspecialchars($user['phone']); ?>" required>
+                            <input type="tel" class="form-control form-control-lg bg-light fs-6" placeholder="Phone Number" name="phone" required>
                         </div>
                         <p><br>Address Information</p>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Street/City/PostalCode" name="address" value="<?php echo htmlspecialchars($user['address']); ?>" required>
+                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Street/City/PostalCode" name="address" required>
                         </div>
                         <div class="input-group mb-3">
                             <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" id="profile-button">Submit</button>
