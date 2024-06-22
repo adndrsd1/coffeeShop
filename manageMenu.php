@@ -47,7 +47,7 @@
     </div>
 
     <!-- View Menu -->
-    <section class="home" id="home">
+    <section class="homeAdmin" id="homeAdmin">
         <div class="container my-5">
             <h2 class="text-center mb-4 text-2xl">Menu</h2>
             <!-- <a href="tambahMenu.php" class="btn btn-primary mb-3">+ Tambah Menu</a> -->
