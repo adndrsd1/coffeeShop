@@ -49,7 +49,7 @@
     <!-- View Menu -->
     <section class="homeAdmin" id="homeAdmin">
         <div class="container my-5">
-            <h2 class="text-center mb-4 text-2xl">Menu</h2>
+            <h2 class="text-center mb-4 text-4xl">Menu</h2>
             <!-- <a href="tambahMenu.php" class="btn btn-primary mb-3">+ Tambah Menu</a> -->
             <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block text-white bg-[#D1BB9E] hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-[#D1BB9E] dark:hover:bg-[#A79277] mb-2" type="button">
                 + Tambah Menu
