@@ -18,7 +18,7 @@
 <body class="left">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand me-auto" href="index.html"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
+            <a class="navbar-brand me-auto" href="index.php"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
         </div>
     </nav>
 
