@@ -9,3 +9,4 @@ if(updateMenu($_POST)) {
 } else {
     echo "Gagal mengupdate data!";
 }
+?>

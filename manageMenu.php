@@ -163,6 +163,7 @@
                                             <!-- Modal body -->
                                             <form action="updateMenu.php" class="p-4 md:p-5" method="post" enctype="multipart/form-data">
                                                 <input type="hidden" name="idMenu" value="<?php echo $row['idMenu'] ?>">
+                                                <input type="hidden" name="gambarLama" value="<?php echo $row['gambar'] ?>">
                                                 <div class="grid gap-4 mb-2 grid-cols-2">
                                                     <div class="col-span-2 sm:col-span-1">
                                                         <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
@@ -175,7 +176,7 @@
                                                     </div>
                                                     <div class="col-span-2">
                                                         <label for="gambar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar</label>
-                                                        <input type="file" name="gambar" id="gambar" value="<?php echo $row['gambar']; ?>" class="bg-white border border-gray-300 text-[#74512D] text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
+                                                        <input type="file" name="gambar" id="gambar" class="bg-white border border-gray-300 text-[#74512D] text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
                                                         <img src="img/<?php echo $row['gambar']; ?>" alt="Menu" class="mt-2 w-[125px] h-[125px]">
                                                     </div>
                                                     <div class="col-span-2">

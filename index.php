@@ -1,12 +1,13 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean Bliss - Home</title>
-
-    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -29,27 +30,21 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" id="home-link" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="menuInfoHome-link" href="#menuInfoHome">Menu</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="reservationInfoHome-link" href="#reservationInfoHome">Reservation</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="deliveryInfoHome-link" href="#deliveryInfoHome">Delivery</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="aboutInfoHome-link" href="#aboutInfoHome">About</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="favorite-link" href="#menuInfoHome">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="reservation-link" href="#reservationInfoHome">Reservation</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="delivery-link" href="#deliveryInfoHome">Delivery</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="about-link" href="#aboutInfoHome">About</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2 " aria-current="page" id="footer-link" href="#footer">Contact</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <a href="#" class="btn btn-light" id="profile-button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-button">
-                        <li><a class="dropdown-item" href="profile.php">Update Profile</a></li>
-                        <li><a class="dropdown-item" href="logout.php">Log Out</a></li>
-                    </ul>
-                </div>
+                <a href="signin.php" class="Lightbtn" id="signin-button">Sign In</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
         </nav>
-
+        
         <!-- Home -->
         <section class="home" id="home">
             <div class="homeBox1">
@@ -79,7 +74,7 @@
                         <div class="carousel-caption d-block text-end">
                             <h5>Hot Chocolate</h5>
                             <p>"Indulge in the rich and creamy goodness of our hot chocolate,<br>made with premium cocoa powder and steamed milk<br>for a luxurious and comforting drink."</p>
-                            <a href="menu.html#cardHotCoffee4" class="btn">More Details</a>
+                            <a href="menu.php" class="btn">More Details</a>
                         </div>
                     </div>
 
@@ -88,7 +83,7 @@
                         <div class="carousel-caption d-block text-end">
                             <h5>Americano</h5>
                             <p>"Enjoy the bold and rich flavor of our classic black coffee,<br>brewed to perfection for a satisfying experience."</p>
-                            <a href="menu.html#cardHotCoffee5" class="btn">More Details</a>
+                            <a href="menu.php#cardHotCoffee5" class="btn">More Details</a>
                         </div>
                     </div>
 
@@ -97,7 +92,7 @@
                         <div class="carousel-caption d-block text-end">
                             <h5>Cappuccino</h5>
                             <p>"Indulge in the creamy goodness of our Cappuccino<br>made with a perfect balance of espresso and steamed milk,<br>topped with a light foam.</p>
-                            <a href="menu.html#cardHotCoffe1" class="btn">More Details</a>
+                            <a href="menu.php#cardHotCoffe1" class="btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -211,7 +206,7 @@
                     </div>
                     <h2>Our menu features</h2>
                     <p>A diverse selection of delectable dishes, each designed to tantalize your taste buds and satisfy your cravings. From hearty coffee options to sumptuous pastries and exquisite snaks, we have something to delight every palate.</p>
-                    <a href="menu.html" class="btn">Check Our Menu</a>
+                    <a href="menu.php" class="btn">Check Our Menu</a>
                 </div>
             </div>
         </section>

@@ -68,7 +68,7 @@ if (!isset($_SESSION['id'])) {
                                 <button type="button" class="btn w-30" id="update-button"><i class="fas fa-edit"></i> Update Information</a>
                             </div>
                             <div class="input-group mb-3 justify-content-end">
-                                <button id="logout-button" type="submit" name="submit" value="logout" class="btn btn-lg w-30 fs-6 Lightbtn end"><i class="fas fa-sign-out-alt"></i> Log-out</button>
+                                <button id="logout-button" type="submit" name="submit" value="logout" class="btn btn-lg w-30 fs-6 Lightbtn end"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
                             </div>        
                         </div>
                     </form>                      

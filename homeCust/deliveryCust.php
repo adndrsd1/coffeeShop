@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- font awesome cdn link -->
 </head>
@@ -20,28 +20,28 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand me-auto" href="index.php"><img src="img/logo.png" alt="Logo"></a>
+                <a class="navbar-brand me-auto" href="homeCust.php"><img src="../img/logo.png" alt="Logo"></a>
 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="img/logo.png" alt="Logo"></h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../img/logo.png" alt="Logo"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
 
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="index.php">Home</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="menu.php">Menu</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="reservation.php">Reservation</a>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="homeCust.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="menuCust.php">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="reservationCust.php">Reservation</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" href="delivery.php">Delivery</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="about.php">About</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" href="deliveryCust.php">Delivery</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="aboutCust.php">About</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
-                <a href="signin.php" class="Lightbtn" id="signin-button">Sign In</a>
+                <a href="../logout.php" class="Lightbtn" id="signin-button">Sign Out</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -61,26 +61,26 @@
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/CaroselMenu1.1.png" class="d-block w-100" alt="First slide">
+                        <img src="../img/CaroselMenu1.1.png" class="d-block w-100" alt="First slide">
                         <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
                             <a href="#displayMenu-hotCoffee" class="Lightbtn">Hot Coffee</a>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/CaroselMenu2.2.png" class="d-block w-100" alt="Second slide">
+                        <img src="../img/CaroselMenu2.2.png" class="d-block w-100" alt="Second slide">
                         <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
                             <a href="#displayMenu-icedCoffee" class="Lightbtn">Ice Coffee</a>
                         </div>
                     </div>
 
                     <div class="carousel-item">
-                        <img src="img/CaroselMenu3.3.png" class="d-block w-100" alt="Third slide">
+                        <img src="../img/CaroselMenu3.3.png" class="d-block w-100" alt="Third slide">
                         <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
                             <a href="#displayMenu-pastires" class="Lightbtn">Pastries</a>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/CaroselMenu4.4.png" class="d-block w-100" alt="Fourth slide">
+                        <img src="../img/CaroselMenu4.4.png" class="d-block w-100" alt="Fourth slide">
                         <div class="carousel-caption d-flex justify-content-center align-items-end" style="height: 100%;">
                             <a href="#deliveryMenu-snacks" class="Lightbtn">Snacks</a>
                         </div>
@@ -100,7 +100,7 @@
 
         <!-- Menu Based on Category -->
         <?php
-            include 'config.php';
+            include '../config.php';
             $categoriesQuery = "SELECT DISTINCT kategori FROM daftar_menu";
             $categoriesResult = mysqli_query($con, $categoriesQuery);
             while ($kategori = mysqli_fetch_assoc($categoriesResult)) {
@@ -118,7 +118,7 @@
                 while ($menu = mysqli_fetch_assoc($menuResult)) {
                     echo "<div class='col-md-4 mb-4'>";
                     echo "<div class='box' id='box{$menu['idMenu']}'>";
-                    echo "<img src='img/{$menu['gambar']}' alt='' class='product-img'>";
+                    echo "<img src='../img/{$menu['gambar']}' alt='' class='product-img'>";
                     echo "<h3 class='product-title'>{$menu['namaMenu']}</h3>";
                     $formattedPrice = number_format($menu['harga'], 0, ',', '.');
                     echo "<div class='price'>Rp {$formattedPrice}</div>";
@@ -140,7 +140,7 @@
         <!-- CART SECTION -->
         <div class="floating-container">
             <div class="floating-button" id="cart-btn" title="Show Cart">
-                <img src="img/cart.png" alt="Chart Logo">
+                <img src="../img/cart.png" alt="Chart Logo">
             </div>
         </div>
 
@@ -159,7 +159,7 @@
             <h2 class="text-center mb-4">Contact Us</h2>
             <div class="footer-container my-5">
                 <div class="logo">
-                    <img src="img/logo1.png" class="img">
+                    <img src="../img/logo1.png" class="img">
                 </div>
                 <div class="location">
                     <h5>Our Location</h5>
@@ -196,7 +196,7 @@
                                 <p class="numbers">2210511072</p>
                             </div>
                             <div class="text-right">
-                                <a href="https://www.upnvj.ac.id/" target="_blank"><img src="img/upn.png"
+                                <a href="https://www.upnvj.ac.id/" target="_blank"><img src="../img/upn.png"
                                         class="logo-upn">
                                 </a>
                             </div>
@@ -212,7 +212,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

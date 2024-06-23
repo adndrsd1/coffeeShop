@@ -9,33 +9,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
 </head>
 <body>
     <div class="page">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand me-auto" href="index.php"><img src="img/logo.png" alt="Logo"></a>
+                <a class="navbar-brand me-auto" href="homeCust.php"><img src="../img/logo.png" alt="Logo"></a>
         
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="img/logo.png" alt="Logo"></h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../img/logo.png" alt="Logo"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link max-lg-2" href="index.php">Home</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="menu.php">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link max-lg-2" href="homeCust.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="menuCust.php">Menu</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" href="#reservation">Reservation</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="delivery.php">Delivery</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="deliveryCust.php">Delivery</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="home.html">About</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
-                <a href="signin.php" class="Lightbtn" id="signin-button">Sign In</a>
+                <a href="../logout.php" class="Lightbtn" id="signin-button">Sign Out</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -100,7 +100,7 @@
             <h2 class="text-center mb-4">Contact Us</h2>
             <div class="footer-container my-5">
                 <div class="logo">
-                    <img src="img/logo1.png" class="img">
+                    <img src="../img/logo1.png" class="img">
                 </div>
                 <div class="location">
                     <h5>Our Location</h5>
@@ -137,7 +137,7 @@
                                 <p class="numbers">2210511072</p>
                             </div>
                             <div class="text-right">
-                                <a href="https://www.upnvj.ac.id/" target="_blank"><img src="img/upn.png"
+                                <a href="https://www.upnvj.ac.id/" target="_blank"><img src="../img/upn.png"
                                         class="logo-upn">
                                 </a>
                             </div>
@@ -151,7 +151,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
 </html>

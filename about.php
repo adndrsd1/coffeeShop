@@ -18,7 +18,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand me-auto" href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                <a class="navbar-brand me-auto" href="index.php"><img src="img/logo.png" alt="Logo"></a>
 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
@@ -29,12 +29,12 @@
 
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="menu.html">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="menu.php">Menu</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="reservation.php">Reservation</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="delivery.php">Delivery</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page"
-                                    href="about.html">About</a></li>
+                                    href="about.php">About</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="footer-link" href="#footer">Contact</a>
                             </li>
                         </ul>

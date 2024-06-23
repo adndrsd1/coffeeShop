@@ -63,13 +63,16 @@ function updateMenu($data) {
     $kategori = htmlspecialchars($data["kategori"]);
     $namaMenu = htmlspecialchars($data["namaMenu"]);
     $harga = htmlspecialchars($data["harga"]);
-    $gambarLama = htmlspecialchars($data["gambar"]);
+    $gambarLama = htmlspecialchars($data["gambarLama"]);
 
     // check if user upload new image
     if($_FILES['gambar']['error'] === 4) {
         $gambar = $gambarLama;
     } else {
         $gambar = uploadImage();
+        if (!$gambar) {
+            return false;
+        }
     }
 
     // query update data
@@ -87,8 +90,22 @@ function updateMenu($data) {
 
 function deleteMenu($id) {
     global $con;
+
+    $query = "SELECT gambar FROM daftar_menu WHERE idMenu = $id";
+    $result = mysqli_query($con, $query);
+    $row = mysqli_fetch_assoc($result);
+    $gambar = $row['gambar'];
+
     mysqli_query($con, "DELETE FROM daftar_menu WHERE idMenu = $id");
-    return mysqli_affected_rows($con);
+
+    if (mysqli_affected_rows($con) > 0) {
+        if (file_exists('img/' . $gambar)) {
+            unlink('img/' . $gambar);
+        }
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function deleteBooking($id) {

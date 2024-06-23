@@ -49,7 +49,7 @@ $password = mysqli_real_escape_string($con, $_POST['password']);
                     if ($row['role'] == 'admin') {
                         header("Location: homeAdmin.php");
                     } else {
-                        header("Location: homeCust.php");
+                        header("Location: homeCust/homeCust.php");
                     }
                 } else {
                     echo "<div class='alert alert-danger' role='alert'>Wrong username or password</div>";
