@@ -2,10 +2,17 @@
 session_start();
 include 'config.php';
 
-if (!isset($_SESSION['id'])) {
+if (isset($_POST['logout'])) {
+    session_destroy();
     header('Location: signin.php');
     exit;
 }
+
+$username = $_SESSION['username'];
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+$fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : '';
+$phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+$address = isset($_SESSION['address']) ? $_SESSION['address'] : '';
 ?>
 
 <!DOCTYPE html>
@@ -46,29 +53,29 @@ if (!isset($_SESSION['id'])) {
                             </div>
                             <p>Username</p>
                             <div class="input-group mb-2">
-                                <span class="form-control form-control-lg bg-light fs-6"><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : ''; ?></span>
+                                <span class="form-control form-control-lg bg-light fs-6"><?php echo htmlspecialchars($username); ?></span>
                             </div>
                             <p>Email</p>
                             <div class="input-group mb-2">
-                                <span class="form-control form-control-lg bg-light fs-6"><?php echo isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : ''; ?></span>
+                                <span class="form-control form-control-lg bg-light fs-6"><?php echo htmlspecialchars($email); ?></span>
                             </div>
                             <p>Full Name</p>
                             <div class="input-group mb-2">
-                                <span class="form-control form-control-lg bg-light fs-6"><?php echo isset($_SESSION['fullname']) ? htmlspecialchars($_SESSION['fullname']) : ''; ?></span>
+                                <span class="form-control form-control-lg bg-light fs-6"><?php echo htmlspecialchars($fullname); ?></span>
                             </div>
                             <p>Phone Number</p>
                             <div class="input-group mb-2">
-                                <span class="form-control form-control-lg bg-light fs-6"><?php echo isset($_SESSION['phone']) ? htmlspecialchars($_SESSION['phone']) : ''; ?></span>
+                                <span class="form-control form-control-lg bg-light fs-6"><?php echo htmlspecialchars($phone); ?></span>
                             </div>
                             <p>Address Information</p>
                             <div class="input-group mb-3">
-                                <span class="form-control form-control-lg bg-light fs-6"><?php echo isset($_SESSION['address']) ? htmlspecialchars($_SESSION['address']) : ''; ?></span>
+                                <span class="form-control form-control-lg bg-light fs-6"><?php echo htmlspecialchars($address); ?></span>
                             </div>
                             <div class="input-group mb-3">
                                 <button type="button" class="btn w-30" id="update-button"><i class="fas fa-edit"></i> Update Information</a>
                             </div>
                             <div class="input-group mb-3 justify-content-end">
-                                <button id="logout-button" type="submit" name="submit" value="logout" class="btn btn-lg w-30 fs-6 Lightbtn end"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+                                <button type="submit" name="submit" value="logout" class="btn btn-lg w-30 fs-6 Lightbtn end" id="logout-button" ><i class="fas fa-sign-out-alt"></i> Sign Out</button>
                             </div>        
                         </div>
                     </form>                      

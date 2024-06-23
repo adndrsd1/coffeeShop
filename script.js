@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if (response.ok) {
-                window.location.href = 'index.html';
+                window.location.href = 'signin.php';
             } else {
                 alert('Logout failed.');
             }

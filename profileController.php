@@ -1,28 +1,31 @@
 <?php
-session_start();
 include "config.php";
+session_start();
 
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['username'])) {
     header('Location: signin.php');
-    exit;
+    exit();
 }
 
-$user_id = $_SESSION['id'];
+if (isset($_POST['submit'])) {
+    $username = $_SESSION['username'];
+    $email = $_SESSION['email'];
+    $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
+    $phone = mysqli_real_escape_string($con, $_POST['phone']);
+    $address = mysqli_real_escape_string($con, $_POST['address']);
 
-$result_profile = mysqli_query($con, "SELECT * FROM users WHERE id='$user_id'");
-if (!$result_profile || mysqli_num_rows($result_profile) == 0) {
-    header('Location: signin.php');
-    exit;
+    $updatequery = mysqli_query($con, "UPDATE users SET fullname = '$fullname', phone = '$phone', address = '$address' WHERE username = '$username'");
+
+    if ($updatequery) {
+        $_SESSION['fullname'] = $fullname;
+        $_SESSION['phone'] = $phone;
+        $_SESSION['address'] = $address;
+
+        header('Location: signin.php');
+
+        exit;
+    } else {
+        echo "Failed to update profile. Error: " . mysqli_error($con);
+    }
 }
-
-$userProfile = mysqli_fetch_assoc($result_profile);
-
-$_SESSION['username'] = $userProfile['username'];
-$_SESSION['email'] = $userProfile['email'];
-$_SESSION['fullname'] = $userProfile['fullname'];
-$_SESSION['phone'] = $userProfile['phone'];
-$_SESSION['address'] = $userProfile['address'];
-
-header('Location: profile.php');
-exit;
 ?>

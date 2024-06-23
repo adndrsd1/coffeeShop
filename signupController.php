@@ -1,5 +1,6 @@
 <?php
 include "config.php";
+session_start();
 
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
@@ -45,14 +46,13 @@ if(isset($_POST['submit'])){
             }
 
             else {
-                mysqli_query($con, "INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')");
-                echo "<div class='alert alert-success' role='alert'>Registration Succesfully!</div>";
-<<<<<<< HEAD
-                // echo "<a href='signin.php'><button class='btn'>Login</button>"; 
-                header('Location: profileForm.php');         
-=======
-                echo "<a href='signin.php'><button class='btn'>Sign In</button>";                
->>>>>>> 0e42c77d64bd41f73625d41dc1ff68e8a8c68007
+                $result = mysqli_query($con, "INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')"); 
+
+                if ($result) {
+                    $_SESSION['username'] = $username;
+                    $_SESSION['email'] = $email;
+                }
+                header('Location: profileForm.php');
             }
         ?>
         </div>
