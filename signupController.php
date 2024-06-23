@@ -49,6 +49,7 @@ if(isset($_POST['submit'])){
                 $result = mysqli_query($con, "INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')"); 
 
                 if ($result) {
+                    $_SESSION['id'] = $id;
                     $_SESSION['username'] = $username;
                     $_SESSION['email'] = $email;
                 }

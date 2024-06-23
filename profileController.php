@@ -2,12 +2,8 @@
 include "config.php";
 session_start();
 
-if (!isset($_SESSION['username'])) {
-    header('Location: signin.php');
-    exit();
-}
-
 if (isset($_POST['submit'])) {
+    $id = $_SESSION['id'];
     $username = $_SESSION['username'];
     $email = $_SESSION['email'];
     $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
