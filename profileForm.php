@@ -1,22 +1,5 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['id'])) {
-    header('Location: profile.php');
-    exit;
-}
-
-include "config.php";
-
-$user_id = $_SESSION['id'];
-$query = "SELECT * FROM users WHERE id='$user_id'";
-$result = mysqli_query($con, $query);
-$user = mysqli_fetch_assoc($result);
-
-if (!$user) {
-    header('Location: signin.php');
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +21,7 @@ if (!$user) {
 <body class="left">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand me-auto" href="index.html"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
+            <a class="navbar-brand me-auto" href="homeCust.php"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
         </div>
     </nav>
 
@@ -55,7 +38,7 @@ if (!$user) {
 
             <!---form---> 
             <div class="col-md-6 right-box">
-                <form id="updateProfile" action="updateProfile.php" method="post">
+                <form id="profileForm" action="profileController.php" method="post">
                     <div class="row align-items-center">
                         <div class="header-text mb-4">
                             <h2>Complete Your Profile</h2>
@@ -72,7 +55,7 @@ if (!$user) {
                             <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Street/City/PostalCode" name="address" required>
                         </div>
                         <div class="input-group mb-3">
-                            <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" id="profile-button">Submit</button>
+                            <button type="submit" class="btn btn-lg w-100 fs-6 Lightbtn" name="submit">Submit</button>
                         </div>
                     </div>
                 </form>

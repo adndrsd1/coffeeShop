@@ -225,58 +225,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // PROFILE
 document.addEventListener('DOMContentLoaded', function() {
-    const profileForm = document.getElementById('profile-button');
-    const updateForm = document.getElementById('update-button');
-    const logoutButton = document.getElementById('logout-button');
+    const updateButton = document.getElementById('update-button');
+    const logoutButton = document.getElementById('profile-button');
 
-    // Fetch and display user profile data
-    fetchProfileData();
+    updateButton.addEventListener('click', function() {
+        var isEditMode = this.dataset.editMode === 'true';
+        var elements = [
+          { id: 'username', type: 'text', value: 'Fatin' },
+          { id: 'email', type: 'email', value: 'FatinSyahira@gmail.com' },
+          { id: 'fullname', type: 'text', value: 'Fatin Syahira' },
+          { id: 'phone', type: 'tel', value: '81315225350' },
+          { id: 'address', type: 'text', value: 'Street/City/PostalCode' }
+        ];
 
-    // Function to fetch user profile data
-    function fetchProfileData() {
-        fetch('profileForm.php')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('username').textContent = data.username;
-                document.getElementById('email').textContent = data.email;
-                document.getElementById('fullname').textContent = data.fullname;
-                document.getElementById('phone').textContent = data.phone;
-                document.getElementById('address').textContent = data.address;
-            })
-            .catch(error => console.error('Error fetching profile data:', error));
-    }
-    
-    updateForm.addEventListener('click', function() {
-        window.location.href = 'profileForm.php';
+        elements.forEach(function(element) {
+          var el = document.getElementById(element.id);
+          if (isEditMode) {
+            var input = document.createElement('span');
+            input.className = 'form-control form-control-lg bg-light fs-6';
+            input.id = element.id;
+            input.textContent = el.value;
+            el.parentNode.replaceChild(input, el);
+          } else {
+            var span = document.createElement('input');
+            span.className = 'form-control form-control-lg bg-light fs-6';
+            span.id = element.id;
+            span.type = element.type;
+            span.value = el.textContent;
+            span.required = true;
+            el.parentNode.replaceChild(span, el);
+          }
     });
 
-    // Update profile form submit handler
-    profileForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        let formData = new FormData(updateForm);
-        let updateURL = 'updateProfile.php';
-
-        fetch(updateURL, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert(data.message);
-                    fetchProfileData();
-                } else {
-                    alert('Failed to update profile');
-                }
-            })
-            .catch(error => console.error('Error updating profile:', error));
-    });
-});
-
-// LOGOUT
-document.addEventListener('DOMContentLoaded', function() {
-    const logoutButton = document.getElementById('logout-button');
+    this.dataset.editMode = !isEditMode;
+    this.innerHTML = isEditMode ? '<i class="fas fa-edit"></i> Update Information' : '<i class="fas fa-save"></i> Save Information';
+  });
 
     logoutButton.addEventListener('click', function() {
         fetch('logout.php', {
@@ -284,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if (response.ok) {
-                window.location.href = 'index.php';
+                window.location.href = 'signin.php';
             } else {
                 alert('Logout failed.');
             }

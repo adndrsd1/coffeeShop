@@ -30,7 +30,7 @@
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="menu.php">Menu</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2 active" aria-current="page" href="#reservation">Reservation</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" href="delivery.php">Delivery</a></li>
-                            <li class="nav-item"><a class="nav-link mx-lg-2" href="home.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link mx-lg-2" href="index.php">About</a></li>
                             <li class="nav-item"><a class="nav-link mx-lg-2" id="contact-link" href="#contact">Contact</a></li>
                         </ul>
                     </div>

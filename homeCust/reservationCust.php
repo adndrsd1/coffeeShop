@@ -46,7 +46,7 @@
         <section class="reservation" id="reservation">
             <div class="container my-5">
                 <h2 class="text-center mb-4">Table Reservation</h2>
-                <form action="reservationController.php" method="post">
+                <form action="reservationControllerCust.php" method="post">
                     <div class="mb-3">
                         <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="name" name="fullName" required>
