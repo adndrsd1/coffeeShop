@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Send data to server using AJAX
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "homeCust/checkout.php", true);
+        xhr.open("POST", "checkout.php", true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check stock
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "homeCust/checkStock.php", true);
+        xhr.open("POST", "checkStock.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
