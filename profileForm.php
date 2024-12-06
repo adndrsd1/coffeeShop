@@ -21,7 +21,7 @@ session_start();
 <body class="left">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand me-auto" href="homeCust.php"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
+            <a class="navbar-brand me-auto" href="/homeCust/homeCust.php"><img src="img/logo.png" alt="Bean Bliss Logo"></a>
         </div>
     </nav>
 
@@ -38,7 +38,7 @@ session_start();
 
             <!---form---> 
             <div class="col-md-6 right-box">
-                <form id="profileForm" action="profileController.php" method="post">
+                <form id="profileForm" action="./homeCust/profileController.php" method="post">
                     <div class="row align-items-center">
                         <div class="header-text mb-4">
                             <h2>Complete Your Profile</h2>

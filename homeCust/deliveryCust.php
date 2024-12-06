@@ -212,7 +212,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <!-- JavaScript -->
-    <script src="../script.js"></script>
+    <script src="scriptCust.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['phone'] = $phone;
         $_SESSION['address'] = $address;
 
-        header('Location: signin.php');
+        header('Location: ../signin.php');
 
         exit;
     } else {

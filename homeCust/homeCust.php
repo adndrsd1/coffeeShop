@@ -45,7 +45,7 @@ session_start();
                 <div class="dropdown">
                     <a href="#" class="btn btn-light" id="profile-button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-button">
-                        <li><a class="dropdown-item" href="../profile.php">Update Profile</a></li>
+                        <li><a class="dropdown-item" href="profile.php">Update Profile</a></li>
                         <li><a class="dropdown-item" href="../logout.php">Sign Out</a></li>
                     </ul>
                 </div>
